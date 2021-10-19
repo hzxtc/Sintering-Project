@@ -13,6 +13,7 @@ def distance(x1, y1, x2, y2):
     d = ((x1 - x2)**2.0 + (y1 - y2)**2.0)**(0.5)
     return d
 
+
 # current_LCG is current largest cluster radius
 def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_LCG ):
     overlap = False
