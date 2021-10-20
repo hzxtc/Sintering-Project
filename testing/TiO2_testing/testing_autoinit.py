@@ -25,19 +25,27 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
     # check whether this LCG is smaller than current radius
     if current_LCG <= current_radius :
         current_LCG = current_radius
-
+    
+    isRight = False
+    isLeft = False
+    isUp = False
+    isDown = False
 
     # determine which kinds overlap is happening here
     overlapPotentialType = []
 
     # right most case, left most, up case, down case
     if current_x + current_radius + current_LCG >=  param.maxx:
+        isRight = True
         overlapPotentialType.append( "right")
     if current_x - current_radius - current_LCG<= param.minx:
+        isLeft = True
         overlapPotentialType.append("left" )
     if current_y + current_radius + current_LCG>= param.maxy:
+        isUp = True
         overlapPotentialType.append("up")
     if current_y - current_radius - current_LCG<= param.miny:
+        isDown = True
         overlapPotentialType.append("down")
     
     # no boundary overlap case
@@ -76,10 +84,26 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
                 if cluster[1] >= param.maxy +delta:
                     newClusterList.append([cluster[0], cluster[1] - param.maxy, cluster[2],cluster[3]])
     
-    print(newClusterList)
+    # check for corner cases
+    if isRight and isUp :
+        for cluster in coords:
+                if (cluster[0] <= current_LCG) and (cluster[1] <= current_LCG):
+                    newClusterList.append([cluster[0] + param.maxx, cluster[1] + param.maxy, cluster[2], cluster[3]])
+    if isRight and isDown :
+        for cluster in coords:
+                if (cluster[0] <= current_LCG) and (cluster[1] >= param.maxy - current_LCG):
+                    newClusterList.append([cluster[0] + param.maxx, cluster[1] - param.maxy, cluster[2], cluster[3]])
+    if isLeft and isUp :
+        for cluster in coords:
+                if (cluster[0] >= param.maxx - current_LCG) and (cluster[1] <= current_LCG):
+                    newClusterList.append([cluster[0] - param.maxx, cluster[1] + param.maxy, cluster[2], cluster[3]])
+    if isLeft and isDown :
+         for cluster in coords:
+                if (cluster[0] >= param.maxx - current_LCG) and (cluster[1] >= param.maxy - current_LCG):
+                    newClusterList.append([cluster[0] - param.maxx, cluster[1] - param.maxy, cluster[2], cluster[3]])
+    
     # checking overlap
     for testCluster in newClusterList:
-        print(distance(current_x,current_y, testCluster[0],testCluster[1]))
         if distance(current_x,current_y, testCluster[0],testCluster[1]) <= current_radius + testCluster[2]:
             overlap = True
             break
