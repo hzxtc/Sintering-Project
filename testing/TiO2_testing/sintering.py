@@ -19,80 +19,166 @@ def distance(x1, y1, x2, y2):
     return r
 
 # current_LCG is current largest cluster radius
+# coords is OUTPUT_DATA
 def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_LCG ):
     overlap = False
+    targetPosition = -1
+
+    # check whether is the beginning
+    if current_LCG <= 0:
+        return overlap, targetPosition, current_LCG
+
+    # check whether this LCG is smaller than current radius
+    if current_LCG <= current_radius :
+        current_LCG = current_radius
+    
+    isRight = False
+    isLeft = False
+    isUp = False
+    isDown = False
 
     # determine which kinds overlap is happening here
     overlapPotentialType = []
 
     # right most case, left most, up case, down case
     if current_x + current_radius + current_LCG >=  param.maxx:
+        isRight = True
         overlapPotentialType.append( "right")
     if current_x - current_radius - current_LCG<= param.minx:
+        isLeft = True
         overlapPotentialType.append("left" )
     if current_y + current_radius + current_LCG>= param.maxy:
+        isUp = True
         overlapPotentialType.append("up")
     if current_y - current_radius - current_LCG<= param.miny:
+        isDown = True
         overlapPotentialType.append("down")
     
     # no boundary overlap case
     if overlapPotentialType == [] :
-        return overlap
+        return overlap, targetPosition, current_LCG
     
     # newClusterList[][0] = x
     # newClusterList[][1] = y
     # newClusterList[][2] = radius
     # newClusterList[][3] = types
+    # newClusterList[][4] = position
     newClusterList = []
-    
-    print(overlapPotentialType)
     
     for types in overlapPotentialType:
         if types == "right" :
             # delta is the longest length that other potential overlap cluster can exist
             delta = current_x + current_radius - param.maxx + 2 * current_LCG
+            #counting position
+            n = 0
             for cluster in coords:
-                if cluster[0] <=  param.minx + delta:
-                    newClusterList.append([cluster[0] + param.maxx, cluster[1], cluster[2], cluster[3]])       
+                if cluster[2] <=  param.minx + delta:
+                    n += 1
+                    newClusterList.append([cluster[2] + param.maxx, cluster[3], cluster[1], cluster[0], n])       
         if types == "left" :
             # this delt should be a negative number
             delta = current_x - current_radius + param.minx - 2 * current_LCG
+            n = 0
             for cluster in coords:
-                if cluster[0] >= param.maxx + delta:
-                    newClusterList.append([cluster[0] - param.maxx, cluster[1], cluster[2], cluster[3]])
+                if cluster[2] >= param.maxx + delta:
+                    n += 1
+                    newClusterList.append([cluster[2] - param.maxx, cluster[3], cluster[1], cluster[0], n])
         if types == "up" :
             delta = current_y + current_radius - param.maxy + 2 * current_LCG
+            n = 0
             for cluster in coords:
-                if cluster[1] <= param.miny + delta:
-                    newClusterList.append([cluster[0], cluster[1] +param.maxy, cluster[2], cluster[3]])
+                if cluster[3] <= param.miny + delta:
+                    n += 1
+                    newClusterList.append([cluster[2], cluster[3] +param.maxy, cluster[1], cluster[0], n])
         if types == "down" :
             delta = current_y - current_radius + param.miny - 2 * current_LCG
+            n = 0
             for cluster in coords:
-                if cluster[1] >= param.maxy +delta:
-                    newClusterList.append([cluster[0], cluster[1] - param.maxy, cluster[2],cluster[3]])
+                if cluster[3] >= param.maxy +delta:
+                    n += 1
+                    newClusterList.append([cluster[2], cluster[3] - param.maxy, cluster[1],cluster[0], n])
     
-    print(newClusterList)
+    # check for corner cases
+    if isRight and isUp :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] <= current_LCG) and (cluster[3] <= current_LCG):
+                    n += 1
+                    newClusterList.append([cluster[2] + param.maxx, cluster[3] + param.maxy, cluster[1], cluster[0], n])
+    if isRight and isDown :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] <= current_LCG) and (cluster[3] >= param.maxy - current_LCG):
+                    n += 1
+                    newClusterList.append([cluster[2] + param.maxx, cluster[3] - param.maxy, cluster[1], cluster[0], n])
+    if isLeft and isUp :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] >= param.maxx - current_LCG) and (cluster[3] <= current_LCG):
+                    n += 1
+                    newClusterList.append([cluster[2] - param.maxx, cluster[3] + param.maxy, cluster[1], cluster[0], n])
+    if isLeft and isDown :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] >= param.maxx - current_LCG) and (cluster[3] >= param.maxy - current_LCG):
+                    n += 1
+                    newClusterList.append([cluster[2] - param.maxx, cluster[3] - param.maxy, cluster[1], cluster[0], n])
+    OVERLAPNUMBERCOUNT = 0
     # checking overlap
     for testCluster in newClusterList:
-        print(distance(current_x,current_y, testCluster[0],testCluster[1]))
+        #  print("radius: " + str(current_radius))
+        #  print("radius: " + str(testCluster[2]))
         if distance(current_x,current_y, testCluster[0],testCluster[1]) <= current_radius + testCluster[2]:
+            targetPosition = testCluster[4]
             overlap = True
-            break
-            
-    
-    return overlap 
+            OVERLAPNUMBERCOUNT += 1 
+            #break
+               
+    # print(len(newClusterList))
+    #  print(OVERLAPNUMBERCOUNT) 
+    # return whether overlap, position of overlap cluster
+    return overlap, targetPosition, current_LCG
 
 
 
 
-def overlap_check(Clusters, OUTPUT_data):
+def overlap_check(Clusters, OUTPUT_data, LCG):
     ovlp = False
     idx = []
     idx_pair = []
     for i in range(len(OUTPUT_data) - 1):
         if (ovlp == True):
             break
-        else:    
+        else:
+            ovlp1 = False
+            ovlp1, overlapPosition, current_LCG = boundaryOverlapCheck(OUTPUT_data, OUTPUT_data[i][2],  OUTPUT_data[i][3], OUTPUT_data[i][1], LCG)
+            if ovlp1 == True:
+                ovlp = True
+                LCG = current_LCG
+                j = overlapPosition
+                
+                
+                idx.append(i)
+                idx.append(j)
+                idx_pair.append([i,j])
+                #merge
+                numnew = OUTPUT_data[i][0] + OUTPUT_data[j][0]
+                if numnew > 8 :
+                    for k in range(len(Clusters)):    
+                        if (Clusters[k][0] == numnew):
+                            Rnew = Clusters[k][1]
+                            Enew = Clusters[k][4]
+                if numnew <= 8 :
+                    Rnew, Enew = boltzmannPopulationForNewCluster(numnew)
+                if (OUTPUT_data[i][0] > OUTPUT_data[j][0]):
+                    xnew = OUTPUT_data[i][2]
+                    ynew = OUTPUT_data[i][3]
+                else:
+                    xnew = OUTPUT_data[j][2]
+                    ynew = OUTPUT_data[j][3]
+                OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
+                break
+            
             for j in range(i+1, len(OUTPUT_data)):
                 R1 = OUTPUT_data[i][1] 
                 R2 = OUTPUT_data[j][1] 
@@ -126,7 +212,7 @@ def overlap_check(Clusters, OUTPUT_data):
     for i in sorted(idx, reverse=True):
         del (OUTPUT_data[i])
 
-    return OUTPUT_data, ovlp, idx_pair
+    return OUTPUT_data, ovlp, idx_pair, LCG
 
 def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     finder = False
@@ -143,55 +229,55 @@ def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     return E_PES
 
 def Cluster_finder(Clusters, OUTPUT_data, irmv, iadd, which='both'):
-     prob1     = []
-     prob2     = []
-     prob1_tmp = []
-     prob2_tmp = []
-     for j in range(Ncluster_tot):     
-         if (Clusters[j][0] == OUTPUT_data[iadd][0] + 1 and (which == 'add' or which == 'both') ) :
-             if (prob1_tmp == []):
-                 E_min_add = Clusters[j][4]
-                 prob1_tmp.append(1.0)     
-             else:
-                 # choose a larger cluster
-                 prob1_tmp.append( expit(-beta * (Clusters[j][4] - E_min_add) ))     
-         if (Clusters[j][0] == OUTPUT_data[irmv][0] - 1 and (which == 'remove' or which == 'both') ) :
-             if (prob2_tmp == []):
-                 E_min_rmv = Clusters[j][4]
-                 prob2_tmp.append(1.0)     
-             else:
-                 # choose a smaller cluster
-                 prob2_tmp.append( expit(-beta * (Clusters[j][4] - E_min_rmv) ))    
+    prob1     = []
+    prob2     = []
+    prob1_tmp = []
+    prob2_tmp = []
+    for j in range(Ncluster_tot):     
+        if (Clusters[j][0] == OUTPUT_data[iadd][0] + 1 and (which == 'add' or which == 'both') ) :
+            if (prob1_tmp == []):
+                E_min_add = Clusters[j][4]
+                prob1_tmp.append(1.0)     
+            else:
+                # choose a larger cluster
+                prob1_tmp.append( expit(-beta * (Clusters[j][4] - E_min_add) ))     
+        if (Clusters[j][0] == OUTPUT_data[irmv][0] - 1 and (which == 'remove' or which == 'both') ) :
+            if (prob2_tmp == []):
+                E_min_rmv = Clusters[j][4]
+                prob2_tmp.append(1.0)     
+            else:
+                # choose a smaller cluster
+                prob2_tmp.append( expit(-beta * (Clusters[j][4] - E_min_rmv) ))    
 
-     if ( which == 'add' or which == 'both' ): 
-         prob1 = [icount / sum(prob1_tmp) for icount in prob1_tmp]
-         # weighted random chosen number
-         clust_idx_add = np.random.choice(np.arange(len(prob1)), 1, p=prob1, replace=False)     
-         Enew_ad   = - np.log(prob1_tmp[clust_idx_add[0]]) / beta + E_min_add
+    if ( which == 'add' or which == 'both' ): 
+        prob1 = [icount / sum(prob1_tmp) for icount in prob1_tmp]
+        # weighted random chosen number
+        clust_idx_add = np.random.choice(np.arange(len(prob1)), 1, p=prob1, replace=False)     
+        Enew_ad   = - np.log(prob1_tmp[clust_idx_add[0]]) / beta + E_min_add
 
-     if ( which == 'remove' or which == 'both' ): 
-         prob2 = [icount / sum(prob2_tmp) for icount in prob2_tmp]
-         # weighted random chosen number
-         clust_idx_rmv = np.random.choice(np.arange(len(prob2)), 1, p=prob2, replace=False)     
-         Enew_remv = - np.log(prob2_tmp[clust_idx_rmv[0]]) / beta + E_min_rmv
+    if ( which == 'remove' or which == 'both' ): 
+        prob2 = [icount / sum(prob2_tmp) for icount in prob2_tmp]
+        # weighted random chosen number
+        clust_idx_rmv = np.random.choice(np.arange(len(prob2)), 1, p=prob2, replace=False)     
+        Enew_remv = - np.log(prob2_tmp[clust_idx_rmv[0]]) / beta + E_min_rmv
 
-     remove = False
-     add    = False
-     for k in range(Ncluster_tot):          
-       if ( (Clusters[k][0] == OUTPUT_data[indx][0] - 1) and (remove==False) and (which == 'remove' or which == 'both') ):
-           Rnew_remv = Clusters[k+clust_idx_rmv[0]][1]
-           remove    = True            
-       if ( (Clusters[k][0] == OUTPUT_data[i][0] + 1) and (add==False) and (which == 'add' or which == 'both') ):
-           Rnew_ad  = Clusters[k+clust_idx_add[0]][1]
-           add      = True 
+    remove = False
+    add    = False
+    for k in range(Ncluster_tot):          
+        if ( (Clusters[k][0] == OUTPUT_data[indx][0] - 1) and (remove==False) and (which == 'remove' or which == 'both') ):
+            Rnew_remv = Clusters[k+clust_idx_rmv[0]][1]
+            remove    = True            
+        if ( (Clusters[k][0] == OUTPUT_data[i][0] + 1) and (add==False) and (which == 'add' or which == 'both') ):
+            Rnew_ad  = Clusters[k+clust_idx_add[0]][1]
+            add      = True 
  
      # return new energy and radius
-     if (which == 'both'):
-         return Enew_ad, Enew_remv, Rnew_ad, Rnew_remv
-     elif (which == 'add'):
-         return Enew_ad, Rnew_ad
-     elif (which == 'remove'):
-         return Enew_remv, Rnew_remv
+    if (which == 'both'):
+        return Enew_ad, Enew_remv, Rnew_ad, Rnew_remv
+    elif (which == 'add'):
+        return Enew_ad, Rnew_ad
+    elif (which == 'remove'):
+        return Enew_remv, Rnew_remv
  
 # READ INPUT   
 
@@ -304,13 +390,13 @@ def boltzmannPopulationForNewCluster(numberOfAtoms) :
     assignedEnergy = 0
     if numberOfAtoms==2:
         index = np.random.choice(Pt2_index,p=Pt2_prob)
-        assignedRadius = Pt2_data[0]
-        assignedEnergy = Pt2_data[1]
+        assignedRadius = Pt2_data[index][0]
+        assignedEnergy = Pt2_data[index][1]
         return assignedRadius, assignedEnergy
     if numberOfAtoms==3:
         index = np.random.choice(Pt3_index,p=Pt3_prob)
-        assignedRadius = Pt3_data[0]
-        assignedEnergy = Pt3_data[1]
+        assignedRadius = Pt3_data[index][0]
+        assignedEnergy = Pt3_data[index][1]
         return assignedRadius, assignedEnergy
     if numberOfAtoms==4:
         index = np.random.choice(Pt4_index,p=Pt4_prob)
@@ -349,13 +435,19 @@ PES_copy     = copy.deepcopy(PES)
 with open('LOG', 'w') as f5:
     f5.write('%s\n' % ('**********LOG info**********'))
 
+    
+    
+LCG = 0
+for cluster in OUTPUT_data:
+    if LCG <= cluster[1]:
+        LCG =  cluster[1]
+
 with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):
         #check overlap
-        OUTPUT_data, ovlp, index_list = overlap_check(Clusters, OUTPUT_data)
+        OUTPUT_data, ovlp, index_list, LCG = overlap_check(Clusters, OUTPUT_data, LCG)
         Ncluster = len(OUTPUT_data)
         if (ovlp == True and step == 0):
-            print(index_list)
             raise ValueError('Overlapping clusters found in the initial setup!')
         elif (ovlp == False and step == 0):
             print('No overlapping clusters found in the initial setp!')

@@ -58,8 +58,6 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
     # newClusterList[][3] = types
     newClusterList = []
     
-    print(overlapPotentialType)
-    
     for types in overlapPotentialType:
         if types == "right" :
             # delta is the longest length that other potential overlap cluster can exist
@@ -200,7 +198,13 @@ while (count < param.num_single_atom):
     for i in range(len(coords)):
         if (distance(x, y, coords[i][0], coords[i][1]) <= coords[i][2] +  param.Ratom):
             overlap = True # overlaping atoms
+    # boundary overlap case check
+    if overlap == False:
+        overlap = boundaryOverlapCheck(coords, x, y, param.Ratom, LCG)
+
     if (overlap == False):
+        if LCG <= Clusters[temp][1]:
+            LCG = Clusters[temp][1]
         coords.append([x, y, param.Ratom, 1])
         with open('INIT', 'a') as f2:
             f2.write('%3i %16.8f %16.8f %16.8f %16.8f \n' %

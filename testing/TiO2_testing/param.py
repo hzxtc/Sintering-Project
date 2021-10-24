@@ -2,7 +2,7 @@
 
 # parameters to initialize the system
 num_clust = 50        # num of Ptn clusters with n > 1
-num_single_atom = 50 # num of single atom Pt
+num_single_atom = 20  # num of single atom Pt
 largest_cluster =7  # largest initial cluster size in the system 
 
 # total number of steps, write step, and temperature
