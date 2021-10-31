@@ -161,6 +161,7 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                 idx.append(i)
                 idx.append(j)
                 idx_pair.append([i,j])
+                # print(idx_pair)
                 #merge
                 numnew = OUTPUT_data[i][0] + OUTPUT_data[j][0]
                 if numnew > 8 :
@@ -445,18 +446,34 @@ for cluster in OUTPUT_data:
 with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):
         #check overlap
-        OUTPUT_data, ovlp, index_list, LCG = overlap_check(Clusters, OUTPUT_data, LCG)
-        Ncluster = len(OUTPUT_data)
-        if (ovlp == True and step == 0):
-            raise ValueError('Overlapping clusters found in the initial setup!')
-        elif (ovlp == False and step == 0):
-            print('No overlapping clusters found in the initial setp!')
-        elif (ovlp == True and step > 0):
+        
+        overlap = False
+        indexListAll = []
+        overlapCheck = True # overlapCheck is to check whether not there is more overlap. It is true as long as ovlp is true. It is false once ovlp is false.
+        while (overlapCheck):
+            
+            OUTPUT_data, ovlp, index_list, LCG = overlap_check(Clusters, OUTPUT_data, LCG)
+            
+            if (ovlp == True):
+                overlap = True
+            overlapCheck = ovlp            
+            Ncluster = len(OUTPUT_data)
+            if (ovlp == True and step == 0):
+                raise ValueError('Overlapping clusters found in the initial setup!')
+            elif (ovlp == False and step == 0):
+                print('No overlapping clusters found in the initial setp!')
+                break
+
+            
+            for index in index_list:
+                indexListAll.append(index)
+
+        if (overlap == True and step > 0):
             with open('LOG', 'a') as f5:
                 f5.write('%5s  %12i\n' % ('step =',step))
                 f5.write('%27s \n' %  ('**********OVERLAP**********'))
                 f5.write('%27s \n' %  ('Overlapping clusters found!'))
-                for lst in index_list:
+                for lst in indexListAll:
                     f5.write('%s' % (lst))
                 f5.write('\n')
 
