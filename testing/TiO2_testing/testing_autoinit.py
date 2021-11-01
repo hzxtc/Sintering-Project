@@ -153,7 +153,7 @@ while (count < param.num_clust):
     elif (param.largest_cluster == 4):
         temp = np.random.randint(0, 14)
     elif (param.largest_cluster == 5):
-        temp = np.random.randint(0, 15)
+        temp = np.random.randint(0, 16)
     elif (param.largest_cluster == 6):
         temp = np.random.randint(0, 21)
     elif (param.largest_cluster == 7):
