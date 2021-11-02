@@ -182,7 +182,7 @@ while (count < param.num_clust):
             f2.write('%3i %16.8f %16.8f %16.8f %16.8f \n' %  
                     (Clusters[temp][0], Clusters[temp][1], x, y, E))
         count += 1
-    if (counter > 50000):
+    if (counter > param.CounterLimit):
         print('total num of generated clusters =', count)
         raise ValueError('small cell is used! use a larger cell!')
     counter += 1
@@ -210,12 +210,12 @@ while (count < param.num_single_atom):
             f2.write('%3i %16.8f %16.8f %16.8f %16.8f \n' %
                     (1, param.Ratom, x, y, E))
         count += 1
-    if (counter > 50000):
+    if (counter > param.CounterLimit):
         print('total num of generated single atoms =', count)
         raise ValueError('small cell is used! use a larger cell!')
     counter += 1
 
-if (counter <= 50000):
+if (counter <= param.CounterLimit):
     print('total num of generated clusters =', param.num_clust + param.num_single_atom)
     print('set maxx in param.py =', (xdups+1), 'X', 'primcell_a')
     print('set maxy in param.py =', (ydups+1), 'X', 'primcell_b')

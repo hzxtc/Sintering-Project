@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # parameters to initialize the system
-num_clust = 50        # num of Ptn clusters with n > 1
+num_clust = 100        # num of Ptn clusters with n > 1
 num_single_atom = 0  # num of single atom Pt
 largest_cluster = 2  # largest initial cluster size in the system 
 
