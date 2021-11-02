@@ -109,7 +109,7 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
     return overlap 
 
 
-numprimcell   = 2.0*param.num_clust + param.num_single_atom
+numprimcell   = param.numprimcellFactor*param.num_clust + param.num_single_atom
 xdups = ydups = (int(numprimcell**0.5) + 2)
 PES           = [] # potential energy surface element, x, y, z, E
 Clusters      = [] # all possible cluster R and E
@@ -145,7 +145,7 @@ counter = 0
 coords = []
 LCG = 0 # LCG is largest cluster radius
 
-# GM situation
+#GM
 while (count < param.num_clust):
     if (param.largest_cluster == 2):
         temp = np.random.randint(0, 1)
@@ -162,7 +162,7 @@ while (count < param.num_clust):
     elif (param.largest_cluster == 8):
         temp = np.random.randint(28, 29)
     elif (param.largest_cluster > 8):
-        temp = np.random.randint(24 + param.largest_cluster, 25 + param.largest_cluster)
+        temp = np.random.randint(24+param.largest_cluster, 25 + param.largest_cluster)
     x = param.xstep_max * np.random.randint(0, (N_meshx - 1) * (xdups + 1)) 
     y = param.ystep_max * np.random.randint(0, (N_meshy - 1) * (ydups + 1)) 
     E = Clusters[temp][4]
@@ -178,12 +178,13 @@ while (count < param.num_clust):
     if (overlap == False):
         if LCG <= Clusters[temp][1]:
             LCG = Clusters[temp][1] 
+
         coords.append([x, y, Clusters[temp][1], Clusters[temp][0]])
         with open('INIT', 'a') as f2:
             f2.write('%3i %16.8f %16.8f %16.8f %16.8f \n' %  
                     (Clusters[temp][0], Clusters[temp][1], x, y, E))
         count += 1
-    if (counter > 500000):
+    if (counter > param.CounterLimit):
         print('total num of generated clusters =', count)
         raise ValueError('small cell is used! use a larger cell!')
     counter += 1
@@ -211,12 +212,12 @@ while (count < param.num_single_atom):
             f2.write('%3i %16.8f %16.8f %16.8f %16.8f \n' %
                     (1, param.Ratom, x, y, E))
         count += 1
-    if (counter > 500000):
+    if (counter > param.CounterLimit):
         print('total num of generated single atoms =', count)
         raise ValueError('small cell is used! use a larger cell!')
     counter += 1
 
-if (counter <= 500000):
+if (counter <= param.CounterLimit):
     print('total num of generated clusters =', param.num_clust + param.num_single_atom)
     print('set maxx in param.py =', (xdups+1), 'X', 'primcell_a')
     print('set maxy in param.py =', (ydups+1), 'X', 'primcell_b')

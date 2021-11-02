@@ -11,6 +11,12 @@ import numpy as np
 import timeit, math, copy
 import param
 from scipy.special import expit          # for handling very small exp
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib.ticker import AutoMinorLocator
+from matplotlib.ticker import MultipleLocator
+from matplotlib.ticker import LinearLocator
+from matplotlib.ticker import ScalarFormatter
 
 # FUNCTIONS
 
@@ -293,6 +299,8 @@ Metro_Max     = param.MMAX   # num of Metropolis steps
 write_step    = param.wstep  # writing metropolis each wstep
 N_mesh        = param.N_mesh # total number of PES points
 N_meshx       = N_meshy = (N_mesh)**(0.5) # number of mesh points in x and y direction
+numprimcell   = param.numprimcellFactor*param.num_clust + param.num_single_atom
+xdups = ydups = (int(numprimcell**0.5) + 2)
 
 with open('INIT','r') as f1:
     f1.readline()
@@ -600,3 +608,52 @@ with open('LOG', 'a') as f5:
     f5.write('%5s \n' %  ('DONE!'))
     f5.write('%s \n' %  ('***************************************'))
 
+if param.SinteringResultPlot: 
+        # plot setting
+
+    minorLocator = AutoMinorLocator()
+    mlx  = MultipleLocator(param.xstep_max)
+    mly  = MultipleLocator(param.ystep_max)
+
+    title_font = {'fontname':'Times New Roman', 'size':'18', 'color':'black', 'weight':'normal',
+                  'verticalalignment':'bottom'} # Bottom vertical alignment for more space
+    axis_font = {'fontname':'Times New Roman', 'size':'18'}
+    mpl.rc('font',family='Times New Roman')
+
+    ax = plt.subplot() # Defines ax variable by creating an empty plot
+
+    # Set the tick labels font
+    for label in (ax.get_yticklabels() + ax.get_xticklabels()):
+        label.set_fontname('Times New Roman')
+        label.set_fontsize(16)
+
+    ax.yaxis.set_minor_locator(mly)
+    ax.xaxis.set_minor_locator(mlx)
+
+    xcoords = []
+    ycoords = []
+    Rcoords = []
+    types   = []
+    for i in range(len(OUTPUT_data)):
+        xcoords.append(OUTPUT_data[i][2])
+        ycoords.append(OUTPUT_data[i][3])
+        Rcoords.append(30*int(OUTPUT_data[i][1])**2)
+        types.append(int(OUTPUT_data[i][0]))
+
+    frame1 = plt.gca()
+    frame1.axes.yaxis.set_ticklabels([])
+    plt.yticks([])
+    frame1.axes.xaxis.set_ticklabels([])
+    plt.xticks([])
+    plt.ylim(0,(ydups+1)*param.primcell_b)
+    plt.xlim(0,(xdups+1)*param.primcell_a)
+    for i,type in enumerate(types):
+        x = xcoords[i]
+        y = ycoords[i]
+        plt.scatter(xcoords, ycoords, color='blue', s=Rcoords, marker='o')
+        plt.text(x, y, type, fontsize=(12+type/3), color='yellow', horizontalalignment='center', 
+                 verticalalignment='center')
+    #plt.axvline(x=(xdups+1)*param.primcell_a, color='black', linestyle='-')
+    #plt.axhline(y=(ydups+1)*param.primcell_b, color='black', linestyle='-')
+    #plt.grid(which='minor', axis='both', linestyle='--')
+    plt.show()

@@ -21,6 +21,7 @@ primcell_b = 3.060749557
 N_mesh = 11*11
 xstep_max  =  primcell_a / 10.0
 ystep_max  =  primcell_b / 10.0
+numprimcellFactor = 2.0
 
 # x and y boundaries of simulation
 maxx   =  primcell_a * 17

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 # parameters to initialize the system
-num_clust = 30        # num of Ptn clusters with n > 1
-num_single_atom = 30  # num of single atom Pt
-largest_cluster = 6  # largest initial cluster size in the system 
+num_clust = 100        # num of Ptn clusters with n > 1
+num_single_atom = 0  # num of single atom Pt
+largest_cluster = 8  # largest initial cluster size in the system 
 
 # total number of steps, write step, and temperature
 MMAX   = 10000
@@ -21,11 +21,12 @@ primcell_b = 3.060749557
 N_mesh = 11*11
 xstep_max  =  primcell_a / 10.0
 ystep_max  =  primcell_b / 10.0
+numprimcellFactor = 5.8
 
 # x and y boundaries of simulation
-maxx   =  primcell_a * 13
+maxx   =  primcell_a * 27
 minx   =  0.0
-maxy   =  primcell_b * 13
+maxy   =  primcell_b * 27
 miny   =  0.0
 
 # constants
@@ -39,3 +40,6 @@ beta          = 1.0/kT
 # VDW radius of Pt in A
 Ratom  =  1.75
 
+# Control
+CounterLimit = 50000
+SinteringResultPlot = True # plot the result of sintering
