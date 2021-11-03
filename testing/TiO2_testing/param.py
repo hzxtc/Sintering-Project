@@ -43,3 +43,4 @@ Ratom  =  1.75
 # Control
 CounterLimit = 500000
 SinteringResultPlot = True # plot the result of sintering
+LimitForOverlap = 5 # limit of total number of overlap process in one step. 

@@ -23,7 +23,10 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =             7
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =             9
+step =             8
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            10
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            12
@@ -35,12 +38,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            14
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=          17
+step =            15
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step =            18
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            16
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            17
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            19
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -59,31 +65,28 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            25
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            26
+step=          26
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =            27
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            28
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            29
+step=          29
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =            30
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =            31
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            32
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            33
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            34
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            35
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            36
@@ -95,19 +98,22 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            38
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            40
+step =            39
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step=          40
+**********MOVE********** 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =            41
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            42
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            43
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            44
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            45
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            46
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            47
@@ -116,15 +122,18 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            48
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            51
+step =            50
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step=          51
+**********MOVE********** 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =            52
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            53
+step=          53
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =            54
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -137,12 +146,6 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            57
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            58
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            59
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            60
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -152,7 +155,7 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            62
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            64
+step =            63
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            65
@@ -163,14 +166,20 @@ step =            66
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            67
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =            68
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            69
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            70
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            71
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            72
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            73
@@ -184,14 +193,11 @@ step =            75
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            76
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            77
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            78
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            79
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            80
@@ -199,7 +205,7 @@ step =            80
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            81
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            82
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -209,9 +215,10 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            84
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            85
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =            86
+**********OVERLAP********** 
+Overlapping clusters found! 
+[66, 90]
 step =            86
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -230,34 +237,28 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =            91
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            92
+step =            93
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            94
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            95
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            96
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =            97
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =            98
+step=          98
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =            99
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           100
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           101
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           102
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           103
@@ -269,12 +270,12 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           106
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           108
+step =           107
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           109
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           110
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -292,26 +293,26 @@ step=         114
 METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           115
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           116
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           117
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           118
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           119
+step=         120
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           120
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+step =           121
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           122
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           124
+step =           123
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           125
@@ -323,37 +324,40 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           127
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           128
+step=         128
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           129
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           130
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         131
+step =           131
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           132
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           134
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           133
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step=         134
+**********MOVE********** 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           135
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           136
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           137
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           138
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           139
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           140
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           141
@@ -363,6 +367,9 @@ step =           142
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           143
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           145
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           146
@@ -380,18 +387,21 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           150
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           153
+step =           152
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           153
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           154
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           155
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           156
+step=         156
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           157
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -401,9 +411,6 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           159
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           160
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           161
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -411,6 +418,9 @@ step =           162
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           163
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           164
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           165
@@ -424,6 +434,9 @@ step =           167
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           168
 **********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           169
+**********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           170
 **********MOVE********** 
@@ -431,15 +444,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           171
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           172
+step=         172
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           173
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           174
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           175
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -449,19 +462,16 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           177
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         178
+step =           178
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step=         179
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           179
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           180
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           181
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           182
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           183
@@ -475,7 +485,7 @@ step =           185
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           186
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           187
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -491,9 +501,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           191
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           192
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           193
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           194
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           195
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -503,9 +519,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           197
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         198
+step =           198
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           199
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -515,7 +531,7 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           202
 **********OVERLAP********** 
 Overlapping clusters found! 
-[66, 14][66, 97][74, 14][11, 95][23, 94][48, 93]
+[40, 91]
 step =           202
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -545,17 +561,27 @@ step =           210
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           211
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           212
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           214
+step =           213
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           215
+**********OVERLAP********** 
+Overlapping clusters found! 
+[35, 84][26, 93]
+step =           215
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           216
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           217
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           218
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           219
@@ -566,11 +592,11 @@ step =           220
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           221
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           222
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           223
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           224
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           225
@@ -584,29 +610,26 @@ step =           227
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           228
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           229
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           230
+step =           231
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           232
+step=         232
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           233
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         234
+step =           234
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           235
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           236
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           237
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           238
@@ -618,18 +641,18 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           240
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           242
+step =           241
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           243
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           244
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           246
+step =           247
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         247
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           248
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -642,74 +665,71 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           251
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           252
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           253
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           254
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           255
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           256
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           257
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           258
+**********OVERLAP********** 
+Overlapping clusters found! 
+[16, 68]
 step =           258
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         259
+step =           259
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step=         260
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step =           261
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           260
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           262
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           263
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         265
+step =           264
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           265
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           266
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           267
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
-step =           269
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           268
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           270
+step =           269
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           271
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           272
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           274
-**********OVERLAP********** 
-Overlapping clusters found! 
-[51, 69]
-step =           274
+step =           273
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           274
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           275
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           276
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           277
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           278
@@ -720,26 +740,23 @@ step =           279
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           280
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           281
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           282
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           283
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           284
+step=         284
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
-step =           285
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+step=         285
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           286
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           287
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           288
@@ -747,81 +764,154 @@ step =           288
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           289
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           290
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           292
+**********OVERLAP********** 
+Overlapping clusters found! 
+[10, 13][55, 10][83, 17][82, 14][43, 82]
+step =           292
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           293
+**********OVERLAP********** 
+Overlapping clusters found! 
+[80, 18][55, 80][78, 16][77, 21][30, 14]
+step =           293
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           294
+**********OVERLAP********** 
+Overlapping clusters found! 
+[74, 18][73, 20][73, 19][14, 73][71, 20]
+step =           294
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           295
+**********OVERLAP********** 
+Overlapping clusters found! 
+[70, 18][69, 20][68, 18][67, 19][66, 19]
 step =           295
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           296
+**********OVERLAP********** 
+Overlapping clusters found! 
+[65, 19][64, 20][63, 19][62, 20][61, 18]
+step =           296
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           297
+**********OVERLAP********** 
+Overlapping clusters found! 
+[60, 21][59, 18][58, 20][57, 19][56, 20]
 step =           297
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           298
+**********OVERLAP********** 
+Overlapping clusters found! 
+[55, 20][54, 20][53, 20][22, 53][51, 18]
+step =           298
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           299
+**********OVERLAP********** 
+Overlapping clusters found! 
+[50, 20][49, 19][48, 19][47, 19][46, 19]
+step =           299
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           300
+**********OVERLAP********** 
+Overlapping clusters found! 
+[44, 16][43, 18][43, 17][42, 17][41, 18]
 step =           300
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           301
+**********OVERLAP********** 
+Overlapping clusters found! 
+[40, 15][39, 17][38, 15][37, 16][36, 15]
+step =           301
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           302
+**********OVERLAP********** 
+Overlapping clusters found! 
+[35, 15][34, 15][33, 13][3, 33][31, 13]
 step =           302
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           303
+**********OVERLAP********** 
+Overlapping clusters found! 
+[30, 12][29, 13][28, 11][27, 11][26, 10]
+step =           303
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           304
+**********OVERLAP********** 
+Overlapping clusters found! 
+[25, 11][24, 9][23, 10][22, 9][21, 10]
+step =           304
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           305
 **********OVERLAP********** 
 Overlapping clusters found! 
-[45, 75]
+[20, 7][19, 9][18, 6][17, 8][16, 6]
 step =           305
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           306
+**********OVERLAP********** 
+Overlapping clusters found! 
+[14, 7][13, 6][13, 7][12, 5][11, 8]
 step =           306
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           307
+**********OVERLAP********** 
+Overlapping clusters found! 
+[10, 4][9, 7][8, 3][7, 6][6, 3]
+step =           307
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           308
+**********OVERLAP********** 
+Overlapping clusters found! 
+[5, 4][4, 2][3, 4]
 step =           308
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           309
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           310
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           311
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           312
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           313
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           314
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           315
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           316
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           317
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           318
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           319
@@ -829,10 +919,10 @@ step =           319
 SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           320
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           321
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           322
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -845,9 +935,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           325
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           328
+step =           326
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           327
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           328
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           329
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -869,15 +965,18 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           335
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           337
+step =           336
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           337
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           338
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           339
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           340
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -889,8 +988,11 @@ step =           342
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           343
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           344
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           345
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           346
@@ -902,12 +1004,18 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           348
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           350
+step =           349
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           350
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           351
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           352
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           353
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -937,14 +1045,13 @@ step =           361
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           362
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           363
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           365
-**********OVERLAP********** 
-Overlapping clusters found! 
-[6, 60]
+step =           364
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           365
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -972,10 +1079,16 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           373
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           374
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           375
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           376
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           377
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           378
@@ -995,7 +1108,7 @@ step =           382
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           383
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           384
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1006,6 +1119,9 @@ step =           386
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           387
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           388
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           389
@@ -1022,7 +1138,7 @@ step =           392
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           393
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           394
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1041,19 +1157,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           399
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           400
+step =           401
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           402
-**********OVERLAP********** 
-Overlapping clusters found! 
-[26, 20][61, 14][41, 79][69, 13]
 step =           402
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           403
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           404
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1111,6 +1223,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           422
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           423
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           424
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1118,6 +1233,9 @@ step =           425
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           426
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           427
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           428
@@ -1134,7 +1252,7 @@ step =           431
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           432
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           433
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1143,7 +1261,7 @@ step =           434
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           435
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           436
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1195,9 +1313,12 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           452
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         453
+step =           453
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           454
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           455
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1217,6 +1338,9 @@ step =           460
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           461
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           462
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           463
@@ -1240,6 +1364,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           469
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           470
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           471
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1252,27 +1379,33 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           474
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           476
+step =           475
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           476
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           477
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           478
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           479
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           480
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           481
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           482
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           483
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           484
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1290,7 +1423,7 @@ step =           488
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           489
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           490
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1305,7 +1438,7 @@ step =           493
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           494
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           495
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1318,12 +1451,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           498
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           499
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           500
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           501
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           502
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1360,19 +1496,18 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           513
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           515
-**********OVERLAP********** 
-Overlapping clusters found! 
-[47, 57]
+step =           514
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           515
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           516
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         517
+step =           517
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           518
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1381,7 +1516,7 @@ step =           519
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           520
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           521
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1399,13 +1534,13 @@ step =           525
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           526
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           527
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           528
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           529
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1420,10 +1555,10 @@ step =           532
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           533
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           534
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           535
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1433,10 +1568,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           537
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           539
-**********OVERLAP********** 
-Overlapping clusters found! 
-[2, 38]
+step =           538
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           539
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1457,13 +1591,13 @@ step =           544
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           545
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           546
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           547
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           548
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1475,7 +1609,7 @@ step =           550
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           551
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           552
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1484,7 +1618,7 @@ step =           553
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           554
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           555
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1503,12 +1637,12 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           560
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         561
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step =           562
+step =           561
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           562
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           563
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1521,12 +1655,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           566
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           567
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           568
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           569
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           570
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1553,7 +1690,7 @@ step =           577
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           578
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           579
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1563,18 +1700,21 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           581
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         582
+step =           582
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           583
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           584
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         586
+step =           585
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           586
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           587
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1583,17 +1723,23 @@ step =           588
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           589
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           590
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         591
+step =           591
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           592
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           593
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           594
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           595
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           596
@@ -1611,9 +1757,12 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           600
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         602
+step =           601
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           602
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           603
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1650,6 +1799,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           614
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           615
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           616
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1658,10 +1810,7 @@ step =           617
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           618
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           619
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           620
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1673,10 +1822,10 @@ step =           622
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           623
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           624
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           625
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1688,16 +1837,16 @@ step =           627
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           628
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         629
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           629
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           630
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           631
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           632
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1705,6 +1854,9 @@ step =           633
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           634
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           635
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           636
@@ -1715,7 +1867,7 @@ step =           637
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           638
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           639
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1730,13 +1882,16 @@ step =           643
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           644
 **********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           645
+**********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           646
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           647
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           648
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1745,7 +1900,7 @@ step =           649
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           650
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           651
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1776,9 +1931,12 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           660
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         662
+step =           661
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           662
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           663
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1793,11 +1951,14 @@ step =           666
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           667
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           670
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           668
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           671
+step =           669
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           670
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           672
@@ -1805,10 +1966,10 @@ step =           672
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           673
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           674
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           675
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1823,7 +1984,7 @@ step =           678
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           679
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           680
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1836,15 +1997,15 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           683
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         684
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step =           685
+step =           684
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           686
+step =           685
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           686
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           687
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1859,13 +2020,13 @@ step =           690
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           691
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           692
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           693
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           694
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1904,10 +2065,10 @@ step =           705
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           706
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           707
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           708
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1943,22 +2104,19 @@ step =           718
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           719
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           720
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         721
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
 step =           722
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           723
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           724
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           725
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1979,7 +2137,7 @@ step =           730
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           731
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           732
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -1989,22 +2147,22 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           734
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         735
+step =           735
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           736
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           737
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           738
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           739
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           740
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           741
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           742
@@ -2016,10 +2174,7 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           744
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         745
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step =           746
+step =           745
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           747
@@ -2027,7 +2182,7 @@ step =           747
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           748
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           749
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2043,9 +2198,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           753
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         754
+step =           754
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           755
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2056,6 +2211,9 @@ step =           757
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           758
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           759
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           760
@@ -2069,13 +2227,13 @@ step =           762
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           763
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           764
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
-step=         765
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           765
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           766
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2091,9 +2249,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           770
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         771
+step =           771
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           772
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2108,7 +2266,7 @@ step =           775
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           776
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           777
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2120,22 +2278,25 @@ step =           779
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           780
 **********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+step =           782
+**********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         781
+step =           783
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step=         782
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           784
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           785
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           786
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           787
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           788
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2145,9 +2306,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           790
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         791
+step =           791
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           792
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2160,10 +2321,13 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           795
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         796
+step =           796
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           797
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           798
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           799
@@ -2174,13 +2338,13 @@ step =           800
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           801
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           802
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           803
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           804
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2220,10 +2384,7 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           816
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         817
-**********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
-step =           818
+step =           817
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           819
@@ -2231,7 +2392,7 @@ step =           819
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           820
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           821
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2240,13 +2401,13 @@ step =           822
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           823
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           824
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         825
+step =           825
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           826
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2267,7 +2428,7 @@ step =           831
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           832
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           833
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2303,7 +2464,7 @@ step =           843
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           844
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           845
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2313,9 +2474,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           847
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         848
+step =           848
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           849
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2337,9 +2498,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           855
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         856
+step =           856
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           857
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2354,7 +2515,7 @@ step =           860
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           861
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           862
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2400,9 +2561,6 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           876
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           877
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           878
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2411,13 +2569,13 @@ step =           879
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           880
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           881
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           882
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           883
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2430,15 +2588,12 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           886
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           887
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           888
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           889
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           890
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2447,31 +2602,31 @@ step =           891
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           892
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           893
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           894
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           895
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           896
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           899
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
-step =           900
+step =           897
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           901
+step =           898
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           899
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           900
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           902
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           903
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2479,6 +2634,9 @@ step =           904
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           905
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           906
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           907
@@ -2499,9 +2657,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           912
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         913
+step =           913
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           914
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2520,12 +2678,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           919
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           920
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           921
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           922
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2538,9 +2693,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           925
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         926
+step =           926
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           927
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2556,9 +2711,9 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           931
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step=         932
+step =           932
 **********MOVE********** 
-METROPOLIS MOVE TO A NEW CLUSTER IS NOT FAVORABLE! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           933
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2570,19 +2725,19 @@ step =           935
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           936
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           937
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           938
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           939
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           940
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           941
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2597,7 +2752,7 @@ step =           944
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           945
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           946
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2605,9 +2760,6 @@ step =           947
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           948
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           949
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           950
@@ -2619,9 +2771,6 @@ SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED!
 step =           952
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
-step =           953
-**********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           954
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2630,7 +2779,7 @@ step =           955
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           956
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
 step =           957
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2639,7 +2788,7 @@ step =           958
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           959
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           960
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2657,8 +2806,11 @@ step =           964
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           965
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           966
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           967
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           968
@@ -2684,7 +2836,7 @@ step =           974
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           975
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           976
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2708,7 +2860,10 @@ step =           982
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           983
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
+step =           984
+**********MOVE********** 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =           985
 **********MOVE********** 
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
@@ -2756,11 +2911,11 @@ step =           999
 SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 step =          1000
 **********MOVE********** 
-SINGLE ATOM MOVE OUTSIDE OF A CLUSTER ACCEPTED! 
+SINGLE ATOM MOVE OUTSIDE OF THE CLUSTER IS NOT ACCEPTED! 
 
 **********CALCULATION IS DONE********** 
 Total steps =          1000
-    Final number of clusters =   66 
-    Total MC time in seconds =       2.87374019 
+    Final number of clusters =    4 
+    Total MC time in seconds =       1.73242426 
 DONE! 
 *************************************** 

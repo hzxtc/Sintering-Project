@@ -455,10 +455,11 @@ with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):
         #check overlap
         
+        overlapNumberCount = 0
         overlap = False
         indexListAll = []
         overlapCheck = True # overlapCheck is to check whether not there is more overlap. It is true as long as ovlp is true. It is false once ovlp is false.
-        while (overlapCheck):
+        while (overlapCheck and (overlapNumberCount < param. LimitForOverlap)):
             
             OUTPUT_data, ovlp, index_list, LCG = overlap_check(Clusters, OUTPUT_data, LCG)
             
@@ -475,6 +476,8 @@ with open('metropolis','w') as f4:
             
             for index in index_list:
                 indexListAll.append(index)
+
+            overlapNumberCount += 1
 
         if (overlap == True and step > 0):
             with open('LOG', 'a') as f5:
