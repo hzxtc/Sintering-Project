@@ -161,15 +161,19 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
             if ovlp1 == True:
                 ovlp = True
                 LCG = current_LCG
-                j = overlapPosition
+                j1 = overlapPosition
                 
-                
+                # eliminate the possiblity that overlap itself
+                if (i == j1):
+                    ovlp = False
+                    break
+
                 idx.append(i)
-                idx.append(j)
-                idx_pair.append([i,j])
-                # print(idx_pair)
+                idx.append(j1)
+                idx_pair.append([i,j1])
+                print("boundary overlap")
                 #merge
-                numnew = OUTPUT_data[i][0] + OUTPUT_data[j][0]
+                numnew = OUTPUT_data[i][0] + OUTPUT_data[j1][0]
                 if numnew > 8 :
                     for k in range(len(Clusters)):    
                         if (Clusters[k][0] == numnew):
@@ -177,20 +181,22 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                             Enew = Clusters[k][4]
                 if numnew <= 8 :
                     Rnew, Enew = boltzmannPopulationForNewCluster(numnew)
-                if (OUTPUT_data[i][0] > OUTPUT_data[j][0]):
+                if (OUTPUT_data[i][0] > OUTPUT_data[j1][0]):
                     xnew = OUTPUT_data[i][2]
                     ynew = OUTPUT_data[i][3]
                 else:
-                    xnew = OUTPUT_data[j][2]
-                    ynew = OUTPUT_data[j][3]
+                    xnew = OUTPUT_data[j1][2]
+                    ynew = OUTPUT_data[j1][3]
                 OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
                 break
             
             for j in range(i+1, len(OUTPUT_data)):
+                
                 R1 = OUTPUT_data[i][1] 
                 R2 = OUTPUT_data[j][1] 
                 d  = distance(OUTPUT_data[i][2],OUTPUT_data[i][3],OUTPUT_data[j][2],OUTPUT_data[j][3])
                 if (d < R1 + R2):
+                    print("normal overlap")
                     ovlp = True
                     idx.append(i)
                     idx.append(j)
@@ -213,12 +219,20 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                     OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
                     break
     #removing duplicates from the list
-    idx = list(dict.fromkeys(idx))
+   # idx = list(dict.fromkeys(idx))
     #idx = list(dict.fromkeys(idx))
     
-    for i in sorted(idx, reverse=True):
-        del (OUTPUT_data[i])
+   # for i in sorted(idx, reverse=True):
+       # del (OUTPUT_data[i])
 
+    # new remove methond
+    if (ovlp == True):
+        if (idx[0]<idx[1]):
+            OUTPUT_data.pop(idx[0]) # remove i 
+            OUTPUT_data.pop(idx[1]-1) # remove j -1
+        if (idx[0]>idx[1]):
+            OUTPUT_data.pop(idx[0]) # remove i 
+            OUTPUT_data.pop(idx[1]) # remove j  
     return OUTPUT_data, ovlp, idx_pair, LCG
 
 def PES_finder(X_new, Y_new, PES_copy, N_mesh):
@@ -299,7 +313,7 @@ Metro_Max     = param.MMAX   # num of Metropolis steps
 write_step    = param.wstep  # writing metropolis each wstep
 N_mesh        = param.N_mesh # total number of PES points
 N_meshx       = N_meshy = (N_mesh)**(0.5) # number of mesh points in x and y direction
-numprimcell   = 2.0*param.num_clust + param.num_single_atom
+numprimcell   = param.numprimcellFactor*param.num_clust + param.num_single_atom
 xdups = ydups = (int(numprimcell**0.5) + 2)
 
 with open('INIT','r') as f1:
@@ -453,6 +467,10 @@ for cluster in OUTPUT_data:
 
 with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):
+        totalAtoms = 0
+        for tar in OUTPUT_data:
+            totalAtoms = totalAtoms + tar[0]
+        print(str(step)+ ": " + str(totalAtoms))
         #check overlap
         
         overlapNumberCount = 0
@@ -462,7 +480,10 @@ with open('metropolis','w') as f4:
         while (overlapCheck and (overlapNumberCount < param. LimitForOverlap)):
             
             OUTPUT_data, ovlp, index_list, LCG = overlap_check(Clusters, OUTPUT_data, LCG)
-            
+            totalAtoms1 = 0
+            for tar in OUTPUT_data:
+                totalAtoms1 = totalAtoms1 + tar[0]
+            print(str(overlapNumberCount)+ ": " + str(totalAtoms1))
             if (ovlp == True):
                 overlap = True
             overlapCheck = ovlp            

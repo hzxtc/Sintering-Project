@@ -299,7 +299,7 @@ Metro_Max     = param.MMAX   # num of Metropolis steps
 write_step    = param.wstep  # writing metropolis each wstep
 N_mesh        = param.N_mesh # total number of PES points
 N_meshx       = N_meshy = (N_mesh)**(0.5) # number of mesh points in x and y direction
-numprimcell   = 2.0*param.num_clust + param.num_single_atom
+numprimcell   = param.numprimcellFactor*param.num_clust + param.num_single_atom
 xdups = ydups = (int(numprimcell**0.5) + 2)
 
 with open('INIT','r') as f1:
