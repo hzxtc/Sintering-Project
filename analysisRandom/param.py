@@ -3,10 +3,10 @@
 # parameters to initialize the system
 num_clust = 100        # num of Ptn clusters with n > 1
 num_single_atom = 0  # num of single atom Pt
-largest_cluster = 2  # largest initial cluster size in the system 
+largest_cluster = 3  # largest initial cluster size in the system 
 
 # total number of steps, write step, and temperature
-MMAX   = 1000
+MMAX   = 10000
 wstep  =  1 
 T      = 700
 
@@ -21,6 +21,7 @@ primcell_b = 3.060749557
 N_mesh = 11*11
 xstep_max  =  primcell_a / 10.0
 ystep_max  =  primcell_b / 10.0
+numprimecellFactor = 2.0
 
 # x and y boundaries of simulation
 maxx   =  primcell_a * 17
@@ -40,5 +41,6 @@ beta          = 1.0/kT
 Ratom  =  1.75
 
 # Control
-CounterLimit = 500000
+CounterLimit = 50000
 SinteringResultPlot = True # plot the result of sintering
+LimitForOverlap = 1  # limit of total number of overlap process in one step. 

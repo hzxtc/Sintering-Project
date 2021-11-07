@@ -109,7 +109,7 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
     return overlap 
 
 
-numprimcell   = 2.0*param.num_clust + param.num_single_atom
+numprimcell   = param.numprimecellFactor*param.num_clust + param.num_single_atom
 xdups = ydups = (int(numprimcell**0.5) + 2)
 PES           = [] # potential energy surface element, x, y, z, E
 Clusters      = [] # all possible cluster R and E
