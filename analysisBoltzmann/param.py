@@ -2,8 +2,8 @@
 
 # parameters to initialize the system
 num_clust = 100        # num of Ptn clusters with n > 1
-num_single_atom = 0  # num of single atom Pt
-largest_cluster = 3  # largest initial cluster size in the system 
+num_single_atom = 100  # num of single atom Pt
+largest_cluster = 2  # largest initial cluster size in the system 
 
 # total number of steps, write step, and temperature
 MMAX   = 10000
@@ -24,9 +24,9 @@ ystep_max  =  primcell_b / 10.0
 numprimecellFactor = 2.0
 
 # x and y boundaries of simulation
-maxx   =  primcell_a * 17
+maxx   =  primcell_a * 20
 minx   =  0.0
-maxy   =  primcell_b * 17
+maxy   =  primcell_b * 20
 miny   =  0.0
 
 # constants

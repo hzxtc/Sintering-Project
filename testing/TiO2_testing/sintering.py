@@ -209,9 +209,9 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                 idx.append(i)
                 idx.append(j1)
                 idx_pair.append([i,j1])
-                print("boundary overlap")
-                print("LCG: " + str(LCG))
-                print("x1: " + str(OUTPUT_data[i][2]) + " y1: " + str(OUTPUT_data[i][3])+ " r1: " + str(OUTPUT_data[i][1]) + " x2: " + str(OUTPUT_data[j1][2]) + " y2: " + str(OUTPUT_data[j1][3])+ " r2: " + str(OUTPUT_data[j1][1]))
+               # print("boundary overlap")
+               # print("LCG: " + str(LCG))
+               # print("x1: " + str(OUTPUT_data[i][2]) + " y1: " + str(OUTPUT_data[i][3])+ " r1: " + str(OUTPUT_data[i][1]) + " x2: " + str(OUTPUT_data[j1][2]) + " y2: " + str(OUTPUT_data[j1][3])+ " r2: " + str(OUTPUT_data[j1][1]))
                 #merge
                 numnew = OUTPUT_data[i][0] + OUTPUT_data[j1][0]
                 if numnew > 8 :
