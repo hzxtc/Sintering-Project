@@ -1,9 +1,11 @@
 #!/usr/bin/env python
+import numpy as np
 
+# param.py for Al2O3
 # parameters to initialize the system
-num_clust = 10        # num of Ptn clusters with n > 1
-num_single_atom = 10  # num of single atom Pt
-largest_cluster = 2  # largest initial cluster size in the system 
+num_clust = 100        # num of Ptn clusters with n > 1
+num_single_atom = 30  # num of single atom Pt
+largest_cluster = 4  # largest initial cluster size in the system 
 
 # total number of steps, write step, and temperature
 MMAX   = 10000
@@ -16,18 +18,20 @@ unitcell_b = 12.243
 unitcell_c = 26.362
 
 # primitive cell parameters in A (used for PES)
-primcell_a = 6.607835831
-primcell_b = 3.060749557
+primcell_a = 4.84025 #these are the lengths of the a and b vectors- not the coordinates of then in cartesian
+primcell_b = 4.84025 #would it be a good idea to add in the angle between the unit cells as well, and make that  something used to walk around on the mesh?
 N_mesh = 11*11
-xstep_max  =  primcell_a / 10.0
-ystep_max  =  primcell_b / 10.0
-numprimecellFactor = 2.0
+xstep_max  =  primcell_a / 10
+ystep_max  =  primcell_b / 10
+numprimecellFactor = 5.0
 
 # x and y boundaries of simulation
-maxx   =  primcell_a * 20
-minx   =  0.0
-maxy   =  primcell_b * 20
-miny   =  0.0
+fixFactorForY = np.sqrt(3)/2 
+num_primcellInOneDirection = 26.0
+maxx   = num_primcellInOneDirection * primcell_a
+minx   =  0.0 #this needs to be defined differently - I think if i define the vector rel to (0,0) then scale the vector appropriately- probably just define it in the cdes
+maxy   =  primcell_b * fixFactorForY  * num_primcellInOneDirection
+miny   =  0.0 * fixFactorForY
 
 # constants
 hartree_to_ev = 27.2114
