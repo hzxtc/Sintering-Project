@@ -4,7 +4,7 @@ import numpy as np
 # param.py for Al2O3
 # parameters to initialize the system
 num_clust = 100        # num of Ptn clusters with n > 1
-num_single_atom = 30  # num of single atom Pt
+num_single_atom = 100  # num of single atom Pt
 largest_cluster = 4  # largest initial cluster size in the system 
 
 # total number of steps, write step, and temperature
@@ -27,7 +27,7 @@ numprimecellFactor = 5.0
 
 # x and y boundaries of simulation
 fixFactorForY = np.sqrt(3)/2 
-num_primcellInOneDirection = 26.0
+num_primcellInOneDirection = 27.0
 maxx   = num_primcellInOneDirection * primcell_a
 minx   =  0.0 #this needs to be defined differently - I think if i define the vector rel to (0,0) then scale the vector appropriately- probably just define it in the cdes
 maxy   =  primcell_b * fixFactorForY  * num_primcellInOneDirection
