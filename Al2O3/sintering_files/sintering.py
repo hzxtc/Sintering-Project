@@ -60,7 +60,10 @@ def overlap_check(Clusters, OUTPUT_data):
 
 def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     finder = False
-    for ii in range(N_mesh): 
+    n = 0
+    for ii in range(N_mesh - 21):
+        print("count" + str(n))
+        n = n + 1
         dx =  np.abs( param.xstep_max*( math.ceil(X_new/param.xstep_max) % N_meshx ) - PES_copy[ii][1] )
         dy =  np.abs( param.ystep_max*( math.ceil(Y_new/param.ystep_max) % N_meshy ) - PES_copy[ii][2] )
         if ( dx  < 0.1 and dy  < 0.1 ):    
@@ -73,55 +76,57 @@ def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     return E_PES
 
 def Cluster_finder(Clusters, OUTPUT_data, irmv, iadd, which='both'):
-     prob1     = []
-     prob2     = []
-     prob1_tmp = []
-     prob2_tmp = []
-     for j in range(Ncluster_tot):     
-         if (Clusters[j][0] == OUTPUT_data[iadd][0] + 1 and (which == 'add' or which == 'both') ) :
-             if (prob1_tmp == []):
-                 E_min_add = Clusters[j][4]
-                 prob1_tmp.append(1.0)     
-             else:
-                 # choose a larger cluster
-                 prob1_tmp.append( expit(-beta * (Clusters[j][4] - E_min_add) ))     
-         if (Clusters[j][0] == OUTPUT_data[irmv][0] - 1 and (which == 'remove' or which == 'both') ) :
-             if (prob2_tmp == []):
-                 E_min_rmv = Clusters[j][4]
-                 prob2_tmp.append(1.0)     
-             else:
-                 # choose a smaller cluster
-                 prob2_tmp.append( expit(-beta * (Clusters[j][4] - E_min_rmv) ))    
+    prob1     = []
+    prob2     = []
+    prob1_tmp = []
+    prob2_tmp = []
+    for j in range(Ncluster_tot):     
+        if (Clusters[j][0] == OUTPUT_data[iadd][0] + 1 and (which == 'add' or which == 'both') ) :
+            if (prob1_tmp == []):
+                E_min_add = Clusters[j][4]
+                prob1_tmp.append(1.0)     
+            else:
+                # choose a larger cluster
+                prob1_tmp.append( expit(-beta * (Clusters[j][4] - E_min_add) ))     
+        if (Clusters[j][0] == OUTPUT_data[irmv][0] - 1 and (which == 'remove' or which == 'both') ) :
+            if (prob2_tmp == []):
+                E_min_rmv = Clusters[j][4]
+                prob2_tmp.append(1.0)     
+            else:
+                # choose a smaller cluster
+                prob2_tmp.append( expit(-beta * (Clusters[j][4] - E_min_rmv) ))    
 
-     if ( which == 'add' or which == 'both' ): 
-         prob1 = [icount / sum(prob1_tmp) for icount in prob1_tmp]
-         # weighted random chosen number
-         clust_idx_add = np.random.choice(np.arange(len(prob1)), 1, p=prob1, replace=False)     
-         Enew_ad   = - np.log(prob1_tmp[clust_idx_add[0]]) / beta + E_min_add
+    if ( which == 'add' or which == 'both' ): 
+        prob1 = [icount / sum(prob1_tmp) for icount in prob1_tmp]
+        # weighted random chosen number
+        clust_idx_add = np.random.choice(np.arange(len(prob1)), 1, p=prob1, replace=False)     
+        Enew_ad   = - np.log(prob1_tmp[clust_idx_add[0]]) / beta + E_min_add
 
-     if ( which == 'remove' or which == 'both' ): 
-         prob2 = [icount / sum(prob2_tmp) for icount in prob2_tmp]
-         # weighted random chosen number
-         clust_idx_rmv = np.random.choice(np.arange(len(prob2)), 1, p=prob2, replace=False)     
-         Enew_remv = - np.log(prob2_tmp[clust_idx_rmv[0]]) / beta + E_min_rmv
+     
+    if ( which == 'remove' or which == 'both' ): 
+        prob2 = [icount / sum(prob2_tmp) for icount in prob2_tmp]
+        # weighted random chosen number
+        clust_idx_rmv = np.random.choice(np.arange(len(prob2)), 1, p=prob2, replace=False)     
+        Enew_remv = - np.log(prob2_tmp[clust_idx_rmv[0]]) / beta + E_min_rmv
 
-     remove = False
-     add    = False
-     for k in range(Ncluster_tot):          
-       if ( (Clusters[k][0] == OUTPUT_data[indx][0] - 1) and (remove==False) and (which == 'remove' or which == 'both') ):
-           Rnew_remv = Clusters[k+clust_idx_rmv[0]][1]
-           remove    = True            
-       if ( (Clusters[k][0] == OUTPUT_data[i][0] + 1) and (add==False) and (which == 'add' or which == 'both') ):
-           Rnew_ad  = Clusters[k+clust_idx_add[0]][1]
-           add      = True 
+    remove = False
+    add    = False
+    for k in range(Ncluster_tot):          
+        if ( (Clusters[k][0] == OUTPUT_data[indx][0] - 1) and (remove==False) and (which == 'remove' or which == 'both') ):
+            Rnew_remv = Clusters[k+clust_idx_rmv[0]][1]
+            remove    = True            
+        if ( (Clusters[k][0] == OUTPUT_data[i][0] + 1) and (add==False) and (which == 'add' or which == 'both') ):
+            Rnew_ad  = Clusters[k+clust_idx_add[0]][1]
+            add      = True 
  
      # return new energy and radius
-     if (which == 'both'):
-         return Enew_ad, Enew_remv, Rnew_ad, Rnew_remv
-     elif (which == 'add'):
-         return Enew_ad, Rnew_ad
-     elif (which == 'remove'):
-         return Enew_remv, Rnew_remv
+    if (which == 'both'):
+        return Enew_ad, Enew_remv, Rnew_ad, Rnew_remv
+    elif (which == 'add'):
+        return Enew_ad, Rnew_ad
+    elif (which == 'remove'):
+        return Enew_remv, Rnew_remv
+ 
  
 def X_finder(y_coord,primcell,maxx): #this won't work for a supercell- have to play around with it! maybe do all rel maxx?
     #gives the minimum and maximum x values for a given y coordinate
@@ -226,11 +231,10 @@ with open('metropolis','w') as f4:
             px = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
             py = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) 
         #this is where the new X and Y coords are generated- this is probably where to add the scaling vectors. 
-        direction_choice = choose_dir[np.random.randint(0,len(choose_dir)] #this is choosing the direction
+        direction_choice = choose_dir[np.random.randint(0,len(choose_dir))] #this is choosing the direction
 
-
-        X_new = X_temp + step_direction[0] *px * param.xstep_max #choosing the direction of the step
-        Y_new = Y_temp + step_direction[1] *py * param.ystep_max
+        X_new = X_temp + direction_choice[0] *px * param.xstep_max #choosing the direction of the step
+        Y_new = Y_temp + direction_choice[1] *py * param.ystep_max
 
         x_find = X_finder(Y_new, param.primcell_a, param.maxx)       #to make the PBC easier (I think) 
 
@@ -243,12 +247,12 @@ with open('metropolis','w') as f4:
             X_new = (X_new-x_find[0]) + X_Finder(Y_new,param.primcell_a,param.maxx)
         elif ( Y_new < param.miny ):
             Y_new = param.maxy - param.miny + Y_new
-            newx = (newx-x_find[0]) + X_finder(newy,primcell_a,maxx)[0]
+            X_new = (X_new-x_find[0]) + X_finder(Y_new,param.primcell_a,param.maxx)[0]
         #then X PBC
         if ( X_new > param.maxx ):   
-            X_new = X_finder(newy,primcell_a,maxx)[0] - X_finder(newy,primcell_a,maxx)[1] + newx
+            X_new = X_finder(Y_new,param.primcell_a,param.maxx)[0] - X_finder(Y_new,param.primcell_a,param.maxx)[1] + X_new
         elif ( X_new < param.minx ):   
-            X_new = X_finder(newy,primcell_a,maxx)[1] - X_finder(newy,primcell_a,maxx)[0] + newx
+            X_new = X_finder(Y_new,param.primcell_a,param.maxx)[1] - X_finder(Y_new,param.primcell_a,param.maxx)[0] + X_new
 
 
 
