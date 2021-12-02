@@ -61,13 +61,25 @@ def overlap_check(Clusters, OUTPUT_data):
 def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     finder = False
     n = 0
-    for ii in range(N_mesh - 21):
-        print("count" + str(n))
-        n = n + 1
-        dx =  np.abs( param.xstep_max*( math.ceil(X_new/param.xstep_max) % N_meshx ) - PES_copy[ii][1] )
-        dy =  np.abs( param.ystep_max*( math.ceil(Y_new/param.ystep_max) % N_meshy ) - PES_copy[ii][2] )
+    
+    print(str(X_new) + "    "+ str(Y_new))
+    
+    for ii in range(N_mesh - 1):
+        #print("count" + str(n))
+        #n = n + 1
+        # old code
+        #dx =  np.abs( param.xstep_max*( math.ceil(X_new/param.xstep_max) % N_meshx ) - PES_copy[ii][1] )
+        #dy =  np.abs( param.ystep_max*( math.ceil(Y_new/param.ystep_max) % N_meshy ) - PES_copy[ii][2] )
+        dy =  np.abs(  Y_new % (param.primcell_b *  np.sqrt(3)/2)- PES_copy[ii][2] )
+        yShiftForX = Y_new - ( Y_new % (param.primcell_b *  np.sqrt(3)/2))
+        dx =  np.abs( ((X_new +  yShiftForX /np.sqrt(3))% param.primcell_a) - PES_copy[ii][1] )
+        #print(( Y_new % (param.primcell_b *  np.sqrt(3)/2)))
+        #print(str(dx) + ' ' + str(dy))
+        
+        
         if ( dx  < 0.1 and dy  < 0.1 ):    
             # PES found 
+            print("find!")
             E_PES  = PES_copy[ii][3] 
             finder = True
             break    
@@ -225,11 +237,12 @@ with open('metropolis','w') as f4:
         E_temp        = OUTPUT_data[indx][4]
         # choosing step size  
         if ( num_atm_temp == 1 ): #For monomer case.  
-            px = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   
+            px = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
             py = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < py < 4   
         else:  #If part of cluster we want bigger step, otherwise never breaks. We ensure that 
             px = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
             py = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) 
+            
         #this is where the new X and Y coords are generated- this is probably where to add the scaling vectors. 
         direction_choice = choose_dir[np.random.randint(0,len(choose_dir))] #this is choosing the direction
 
@@ -238,13 +251,14 @@ with open('metropolis','w') as f4:
 
         x_find = X_finder(Y_new, param.primcell_a, param.maxx)       #to make the PBC easier (I think) 
 
-        if ( X_new == X_temp and Y_new == Y_temp ):
+        if ( X_new == X_temp and Y_new == Y_temp ): #no change
             continue
+            
         # Periodic Boundry Conditions - edited for Al2O3 lattice 
         #do Y PBC first
         if ( Y_new > param.maxy ):
             Y_new = param.miny - param.maxy + Y_new
-            X_new = (X_new-x_find[0]) + X_Finder(Y_new,param.primcell_a,param.maxx)
+            X_new = (X_new-x_find[0]) + X_finder(Y_new,param.primcell_a,param.maxx)[0]
         elif ( Y_new < param.miny ):
             Y_new = param.maxy - param.miny + Y_new
             X_new = (X_new-x_find[0]) + X_finder(Y_new,param.primcell_a,param.maxx)[0]
@@ -254,8 +268,6 @@ with open('metropolis','w') as f4:
         elif ( X_new < param.minx ):   
             X_new = X_finder(Y_new,param.primcell_a,param.maxx)[1] - X_finder(Y_new,param.primcell_a,param.maxx)[0] + X_new
 
-
-
         # check for new clusters  
         inside_cluster = False
         for i in range (Ncluster):
@@ -264,10 +276,10 @@ with open('metropolis','w') as f4:
             temp_r    = OUTPUT_data[i][1] + param.Ratom
             if ( (temp_dist <  temp_r) and (i !=indx) ):   
                 Eold = E_temp + OUTPUT_data[i][4]       # total Eold
-                if ( OUTPUT_data[indx][0] == 1):
+                if ( OUTPUT_data[indx][0] == 1): 
                     Enew_rmv = 0.0
                     Enew_add, Rnew_add = Cluster_finder(Clusters, OUTPUT_data, i, i, 'add')
-                elif ( OUTPUT_data[indx][0] == 2):
+                elif ( OUTPUT_data[indx][0] == 2): # Pt2 is special?
                     # CLUSTER FINDER FOR EADD
                     Enew_add, Rnew_add = Cluster_finder(Clusters, OUTPUT_data, i, i, 'add')
                     Enew_rmv = PES_finder(X_new, Y_new, PES_copy, N_mesh)
