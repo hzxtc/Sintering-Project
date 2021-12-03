@@ -11,6 +11,12 @@ import numpy as np
 import timeit, math, copy
 import param
 from scipy.special import expit          # for handling very small exp
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from matplotlib.ticker import AutoMinorLocator
+from matplotlib.ticker import MultipleLocator
+from matplotlib.ticker import LinearLocator
+from matplotlib.ticker import ScalarFormatter
 
 # FUNCTIONS
 
@@ -62,24 +68,25 @@ def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     finder = False
     n = 0
     
-    print(str(X_new) + "    "+ str(Y_new))
+    #print(str(X_new) + "    "+ str(Y_new))
     
     for ii in range(N_mesh - 1):
         #print("count" + str(n))
-        #n = n + 1
+        n = n + 1
         # old code
         #dx =  np.abs( param.xstep_max*( math.ceil(X_new/param.xstep_max) % N_meshx ) - PES_copy[ii][1] )
         #dy =  np.abs( param.ystep_max*( math.ceil(Y_new/param.ystep_max) % N_meshy ) - PES_copy[ii][2] )
         dy =  np.abs(  Y_new % (param.primcell_b *  np.sqrt(3)/2)- PES_copy[ii][2] )
         yShiftForX = Y_new - ( Y_new % (param.primcell_b *  np.sqrt(3)/2))
-        dx =  np.abs( ((X_new +  yShiftForX /np.sqrt(3))% param.primcell_a) - PES_copy[ii][1] )
+        dx =  np.abs( ((X_new +  yShiftForX /np.sqrt(3))% param.primcell_a) + 0.0000001 - PES_copy[ii][1] ) % param.primcell_a # extra mode for negative x case
+        # we need to add 0.0000001 for data correction, sometimes the data will lost some very small number after storage and we need to correct it manually in order to fix the calculation
         #print(( Y_new % (param.primcell_b *  np.sqrt(3)/2)))
-        #print(str(dx) + ' ' + str(dy))
+        #print(str(n) + ": " + str(dx) + ' ' + str(dy))
         
         
         if ( dx  < 0.1 and dy  < 0.1 ):    
             # PES found 
-            print("find!")
+            # print("find!")
             E_PES  = PES_copy[ii][3] 
             finder = True
             break    
@@ -237,37 +244,43 @@ with open('metropolis','w') as f4:
         E_temp        = OUTPUT_data[indx][4]
         # choosing step size  
         if ( num_atm_temp == 1 ): #For monomer case.  
-            px = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
-            py = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < py < 4   
+            pxy = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
+            #py = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < py < 4   
         else:  #If part of cluster we want bigger step, otherwise never breaks. We ensure that 
-            px = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
-            py = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) 
+            pxy = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
+            #py = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) 
+            # we don't need two random px and py since we are scaling the direction, if we have two, it will not make any sense
             
         #this is where the new X and Y coords are generated- this is probably where to add the scaling vectors. 
         direction_choice = choose_dir[np.random.randint(0,len(choose_dir))] #this is choosing the direction
 
-        X_new = X_temp + direction_choice[0] *px * param.xstep_max #choosing the direction of the step
-        Y_new = Y_temp + direction_choice[1] *py * param.ystep_max
+            
+        X_new = X_temp + direction_choice[0] *pxy * param.xstep_max #choosing the direction of the step
+        Y_new = Y_temp + direction_choice[1] *pxy * param.ystep_max
 
+    
         x_find = X_finder(Y_new, param.primcell_a, param.maxx)       #to make the PBC easier (I think) 
 
         if ( X_new == X_temp and Y_new == Y_temp ): #no change
+            #print("continue!!!")
             continue
             
         # Periodic Boundry Conditions - edited for Al2O3 lattice 
         #do Y PBC first
-        if ( Y_new > param.maxy ):
-            Y_new = param.miny - param.maxy + Y_new
-            X_new = (X_new-x_find[0]) + X_finder(Y_new,param.primcell_a,param.maxx)[0]
-        elif ( Y_new < param.miny ):
+        if Y_new < param.miny:
             Y_new = param.maxy - param.miny + Y_new
-            X_new = (X_new-x_find[0]) + X_finder(Y_new,param.primcell_a,param.maxx)[0]
-        #then X PBC
-        if ( X_new > param.maxx ):   
-            X_new = X_finder(Y_new,param.primcell_a,param.maxx)[0] - X_finder(Y_new,param.primcell_a,param.maxx)[1] + X_new
-        elif ( X_new < param.minx ):   
-            X_new = X_finder(Y_new,param.primcell_a,param.maxx)[1] - X_finder(Y_new,param.primcell_a,param.maxx)[0] + X_new
+            X_new = (X_new - x_find[0]) + X_finder(Y_new, param.primcell_a,param.maxx)[0]
+        elif Y_new > param.maxy:
+            Y_new = param.miny - param.maxy + Y_new
+            X_new = (X_new - x_find[0]) + X_finder(Y_new, param.primcell_a,param.maxx)[0]
 
+        # X BOUNDARY- need to account for the step size. 
+        if X_new < X_finder(Y_new, param.primcell_a, param.maxx)[0]:
+            X_new = X_new + X_finder(Y_new,param.primcell_a, param.maxx) [1] -  X_finder(Y_new,param.primcell_a, param.maxx) [0]
+        elif X_new > X_finder(Y_new, param.primcell_a, param.maxx)[1]:
+            X_new = X_new + X_finder(Y_new,param.primcell_a, param.maxx) [0] -  X_finder(Y_new,param.primcell_a, param.maxx) [1]
+
+    
         # check for new clusters  
         inside_cluster = False
         for i in range (Ncluster):
@@ -357,3 +370,32 @@ with open('LOG', 'a') as f5:
     f5.write('%5s \n' %  ('DONE!'))
     f5.write('%s \n' %  ('***************************************'))
 
+
+if param.SinteringResultPlot: 
+    # plot setting
+
+    xcoords = []
+    ycoords = []
+    Rcoords = []
+    types   = []
+    for i in range(len(OUTPUT_data)):
+        xcoords.append(OUTPUT_data[i][2])
+        ycoords.append(OUTPUT_data[i][3])
+        Rcoords.append(30*int(OUTPUT_data[i][1])**2)
+        types.append(int(OUTPUT_data[i][0]))
+
+    plt.figure(figsize=(7,7))
+    boundaryDots_X = [0, param.maxx, param.maxx - param.maxy / np.sqrt(3), - param.maxy / np.sqrt(3), 0 ]
+    boundaryDots_Y = [0, 0, param.maxy, param.maxy, 0]
+    plt.plot(boundaryDots_X, boundaryDots_Y,marker="o", markerfacecolor="none", ms=1)
+    
+    for i,type in enumerate(types):
+        x = xcoords[i]
+        y = ycoords[i]
+        plt.scatter(xcoords, ycoords, color='blue', s=Rcoords, marker='o')
+        plt.text(x, y, type, fontsize=(12+type/3), color='yellow', horizontalalignment='center', 
+                 verticalalignment='center')
+    #plt.axvline(x=(xdups+1)*param.primcell_a, color='black', linestyle='-')
+    #plt.axhline(y=(ydups+1)*param.primcell_b, color='black', linestyle='-')
+    #plt.grid(which='minor', axis='both', linestyle='--')
+    plt.show()
