@@ -244,19 +244,25 @@ with open('metropolis','w') as f4:
         E_temp        = OUTPUT_data[indx][4]
         # choosing step size  
         if ( num_atm_temp == 1 ): #For monomer case.  
-            pxy = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
+            pxy1 = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
+            pxy2 = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
+            pxy3 = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < px < 4   , scalar for the vector below
             #py = int( 4.0*(2.0*np.random.rand() - 1.0) )   # -4 < py < 4   
         else:  #If part of cluster we want bigger step, otherwise never breaks. We ensure that 
-            pxy = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
+            pxy1 = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
+            pxy2 = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
+            pxy3 = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) # the step-size is cluster size dependent
             #py = math.ceil( ( 2.0*R_temp)  * ( 2.0*np.random.rand() - 1.0 ) ) 
             # we don't need two random px and py since we are scaling the direction, if we have two, it will not make any sense
             
         #this is where the new X and Y coords are generated- this is probably where to add the scaling vectors. 
-        direction_choice = choose_dir[np.random.randint(0,len(choose_dir))] #this is choosing the direction
-
-            
-        X_new = X_temp + direction_choice[0] *pxy * param.xstep_max #choosing the direction of the step
-        Y_new = Y_temp + direction_choice[1] *pxy * param.ystep_max
+        # we only need three directions to do the trick
+        direction_choice1 = choose_dir[0] #this is choosing the direction 
+        direction_choice2 = choose_dir[1] 
+        direction_choice3 = choose_dir[2] 
+    
+        X_new = X_temp + direction_choice1[0] *pxy1 * param.xstep_max + direction_choice2[0] *pxy2 * param.xstep_max  + direction_choice3[0] * pxy3 * param.xstep_max#choosing the direction of the step
+        Y_new = Y_temp + direction_choice1[1] *pxy1 * param.ystep_max + direction_choice2[1] *pxy2 * param.ystep_max + direction_choice3[1] * pxy3 * param.ystep_max
 
     
         x_find = X_finder(Y_new, param.primcell_a, param.maxx)       #to make the PBC easier (I think) 
