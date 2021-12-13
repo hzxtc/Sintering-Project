@@ -14,6 +14,106 @@ def distance(x1, y1, x2, y2):
     d = ((x1 - x2)**2.0 + (y1 - y2)**2.0)**(0.5)
     return d
 
+# for autoinit version
+# current_LCG is current largest cluster radius
+def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_LCG ):
+    overlap = False
+
+    # check whether is the beginning
+    if current_LCG <= 0:
+        return overlap
+
+    # check whether this LCG is smaller than current radius
+    if current_LCG <= current_radius :
+        current_LCG = current_radius
+    
+    isRight = False
+    isLeft = False
+    isUp = False
+    isDown = False
+
+    # determine which kinds overlap is happening here
+    overlapPotentialType = []
+
+    # right most case, left most, up case, down case
+    if current_x + current_radius + current_LCG >=  param.maxx - current_y/np.sqrt(3): # shifting in x boundary
+        isRight = True
+        overlapPotentialType.append( "right")
+    if current_x - current_radius - current_LCG<= param.minx - current_y/np.sqrt(3): # shifting in x boundary
+        isLeft = True
+        overlapPotentialType.append("left" )
+    if current_y + current_radius + current_LCG>= param.maxy:
+        isUp = True
+        overlapPotentialType.append("up")
+    if current_y - current_radius - current_LCG<= param.miny:
+        isDown = True
+        overlapPotentialType.append("down")
+        
+    # no boundary overlap case
+    if overlapPotentialType == [] :
+        return overlap
+    
+    #print(overlapPotentialType)
+    
+    # newClusterList[][0] = x
+    # newClusterList[][1] = y
+    # newClusterList[][2] = radius
+    # newClusterList[][3] = types
+    newClusterList = []
+    
+    for types in overlapPotentialType:
+        if types == "right" :
+            # delta is the longest length that other potential overlap cluster can exist
+            delta = current_x + current_radius - param.maxx/2 + 2 * current_LCG
+            for cluster in coords:
+                if cluster[0] <=  param.minx - cluster[1]/np.sqrt(3) + delta:
+                    newClusterList.append([cluster[0] + param.maxx, cluster[1], cluster[2], cluster[3]])       
+        if types == "left" :
+            # this delt should be a negative number
+            delta = current_x - current_radius + param.minx - 2 * current_LCG
+            for cluster in coords:
+                if cluster[0] >= param.maxx - cluster[1]/np.sqrt(3) + delta:
+                    newClusterList.append([cluster[0] - param.maxx, cluster[1], cluster[2], cluster[3]])
+        if types == "up" :
+            delta = current_y + current_radius - param.maxy + 2 * current_LCG
+            for cluster in coords:
+                if cluster[1] <= param.miny + delta:
+                    newClusterList.append([cluster[0] - param.maxy/np.sqrt(3), cluster[1] + param.maxy, cluster[2], cluster[3]])
+        if types == "down" :
+            delta = current_y - current_radius + param.miny - 2 * current_LCG
+            for cluster in coords:
+                if cluster[1] >= param.maxy +delta:
+                    newClusterList.append([cluster[0] + param.maxy/np.sqrt(3), cluster[1] - param.maxy, cluster[2],cluster[3]])
+    
+    # check for corner cases
+    if isRight and isUp :
+        for cluster in coords:
+                if (cluster[0] <= current_LCG) and (cluster[1] <= current_LCG):
+                    newClusterList.append([cluster[0] + param.maxx - param.maxy/np.sqrt(3), cluster[1] + param.maxy, cluster[2], cluster[3]])
+    if isRight and isDown :
+        for cluster in coords:
+                if (cluster[0] <= current_LCG) and (cluster[1] >= param.maxy - current_LCG):
+                    newClusterList.append([cluster[0] + param.maxx + param.maxy/np.sqrt(3), cluster[1] - param.maxy, cluster[2], cluster[3]])
+    if isLeft and isUp :
+        for cluster in coords:
+                if (cluster[0] >= param.maxx - current_LCG) and (cluster[1] <= current_LCG):
+                    newClusterList.append([cluster[0] - param.maxx - param.maxy/np.sqrt(3), cluster[1] + param.maxy, cluster[2], cluster[3]])
+    if isLeft and isDown :
+         for cluster in coords:
+                if (cluster[0] >= param.maxx - param.maxy/np.sqrt(3) - current_LCG) and (cluster[1] >= param.maxy - current_LCG):
+                    newClusterList.append([cluster[0] - param.maxx + param.maxy/np.sqrt(3), cluster[1] - param.maxy, cluster[2], cluster[3]])
+    
+    # checking overlap
+    for testCluster in newClusterList:
+        if distance(current_x,current_y, testCluster[0],testCluster[1]) <= current_radius + testCluster[2]:
+            overlap = True
+            break
+                
+    return overlap 
+
+
+
+
 numprimcell   = param.numprimecellFactor*param.num_clust + param.num_single_atom
 xdups = ydups = (int(numprimcell**0.5) + 2)
 PES           = [] # potential energy surface element, x, y, z, E
@@ -89,8 +189,8 @@ while (count < param.num_clust):
             overlap = True # overlaping atoms
 
     # boundary overlap case check
-    #if overlap == False:
-        #overlap = boundaryOverlapCheck(coords, x, y, Clusters[temp][1], LCG)
+    if overlap == False:
+        overlap = boundaryOverlapCheck(coords, x, y, Clusters[temp][1], LCG)
 
     if (overlap == False):
         if LCG <= Clusters[temp][1]:
