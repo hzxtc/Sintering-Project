@@ -219,8 +219,8 @@ while (count < param.num_single_atom):
             overlap = True # overlaping atoms
             
     # boundary overlap case check
-    #if overlap == False:
-        #overlap = boundaryOverlapCheck(coords, x, y, param.Ratom, LCG)
+    if overlap == False:
+        overlap = boundaryOverlapCheck(coords, x, y, param.Ratom, LCG)
 
     if (overlap == False):
         if LCG <= Clusters[temp][1]:
