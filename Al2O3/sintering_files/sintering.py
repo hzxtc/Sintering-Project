@@ -211,21 +211,27 @@ with open('LOG', 'w') as f5:
 with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):
         #check overlap
-        OUTPUT_data, ovlp, index_list = overlap_check(Clusters, OUTPUT_data)
-        Ncluster = len(OUTPUT_data)
-        if (ovlp == True and step == 0):
-            print(index_list)
-            raise ValueError('Overlapping clusters found in the initial setup!')
-        elif (ovlp == False and step == 0):
-            print('No overlapping clusters found in the initial setp!')
-        elif (ovlp == True and step > 0):
-            with open('LOG', 'a') as f5:
-                f5.write('%5s  %12i\n' % ('step =',step))
-                f5.write('%27s \n' %  ('**********OVERLAP**********'))
-                f5.write('%27s \n' %  ('Overlapping clusters found!'))
-                for lst in index_list:
-                    f5.write('%s' % (lst))
-                f5.write('\n')
+        numberOfOverlap = 0
+        overlap = True
+        
+        while numberOfOverlap < param.LimitForOverlap and overlap: # while not reach LimitForOverlap and still overlap
+            OUTPUT_data, ovlp, index_list = overlap_check(Clusters, OUTPUT_data)
+            Ncluster = len(OUTPUT_data)
+            overlap = ovlp
+            numberOfOverlap = numberOfOverlap + 1
+            if (ovlp == True and step == 0):
+                print(index_list)
+                raise ValueError('Overlapping clusters found in the initial setup!')
+            elif (ovlp == False and step == 0):
+                print('No overlapping clusters found in the initial setp!')
+            elif (ovlp == True and step > 0):
+                with open('LOG', 'a') as f5:
+                    f5.write('%5s  %12i\n' % ('step =',step))
+                    f5.write('%27s \n' %  ('**********OVERLAP**********'))
+                    f5.write('%27s \n' %  ('Overlapping clusters found!'))
+                    for lst in index_list:
+                        f5.write('%s' % (lst))
+                    f5.write('\n')
 
         # writing output  
         if ( (step % write_step) == 0 ): 
