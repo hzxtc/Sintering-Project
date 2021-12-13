@@ -10,7 +10,7 @@ largest_cluster = 5  # largest initial cluster size in the system
 # total number of steps, write step, and temperature
 MMAX   = 1000
 wstep  =  1 
-T      = 700
+T      = 750
 
 # unit cell parameters in A
 unitcell_a = 13.216 
