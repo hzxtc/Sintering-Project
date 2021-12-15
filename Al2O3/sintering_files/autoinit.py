@@ -177,8 +177,8 @@ while (count < param.num_clust):
     # new method, using the PES data directly
     temp2 = np.random.randint(0, len(PES))
     yIncreaseFactor =  param.primcell_b * np.random.randint(0, ydups + 1)
-    y = PES[temp][2] + yIncreaseFactor * np.sqrt(3)/2
-    x = PES[temp][1] + param.primcell_a * np.random.randint(0, xdups + 1) -  yIncreaseFactor* 1 /2
+    y = PES[temp2][2] + yIncreaseFactor * np.sqrt(3)/2
+    x = PES[temp2][1] + param.primcell_a * np.random.randint(0, xdups + 1) -  yIncreaseFactor* 1 /2
     
     E = Clusters[temp][4]
     

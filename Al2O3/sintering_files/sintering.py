@@ -5,6 +5,10 @@ Sintering simulation via Ostwald Ripening of metalic clusters deposited on the s
 based on NVT ensemble and metropolis moves.
 
 Borna Zandkarimi 2020
+
+Now, the sintering simulation is modifided for the case on Al2O3
+
+Tom Hong 2021
 '''
 
 import numpy as np
@@ -177,12 +181,18 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                         Rnew, Enew = boltzmannPopulationForNewCluster(numnew)
                         if LCG < Rnew:
                             LCG = Rnew
-                    if (OUTPUT_data[i][0] > OUTPUT_data[j][0]):
-                        xnew = OUTPUT_data[i][2]
-                        ynew = OUTPUT_data[i][3]
-                    else:
-                        xnew = OUTPUT_data[j][2]
-                        ynew = OUTPUT_data[j][3]
+                            
+                    # determine the new location
+                    # this is the old method, the new location would be the one who has the larger number of atoms 
+                    #if (OUTPUT_data[i][0] > OUTPUT_data[j][0]):
+                        #xnew = OUTPUT_data[i][2]
+                        #ynew = OUTPUT_data[i][3]
+                    #else:
+                        #xnew = OUTPUT_data[j][2]
+                        #ynew = OUTPUT_data[j][3]
+                        
+                    # here is the new method:
+                    xnew, ynew = newLocationFinder(OUTPUT_data[i][2], OUTPUT_data[i][3], OUTPUT_data[i][0], OUTPUT_data[j][2], OUTPUT_data[j][3],  OUTPUT_data[j][0])
                     OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
                     break
             # overlap boundary check
@@ -220,12 +230,18 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                     Rnew, Enew = boltzmannPopulationForNewCluster(numnew)
                     if LCG < Rnew:
                         LCG = Rnew
-                if (OUTPUT_data[i][0] > OUTPUT_data[j1][0]):
-                    xnew = OUTPUT_data[i][2]
-                    ynew = OUTPUT_data[i][3]
-                else:
-                    xnew = OUTPUT_data[j1][2]
-                    ynew = OUTPUT_data[j1][3]
+                # determine the new location
+                # this is the old method, the new location would be the one who has the larger number of atoms        
+                #if (OUTPUT_data[i][0] > OUTPUT_data[j1][0]):
+                    #xnew = OUTPUT_data[i][2]
+                    #ynew = OUTPUT_data[i][3]
+                #else:
+                    #xnew = OUTPUT_data[j1][2]
+                    #ynew = OUTPUT_data[j1][3]
+                    
+                    
+                # here is the new method:
+                xnew, ynew = newLocationFinder(OUTPUT_data[i][2], OUTPUT_data[i][3], OUTPUT_data[i][0], OUTPUT_data[j1][2], OUTPUT_data[j1][3],  OUTPUT_data[j1][0])
                 OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
                 break
             
@@ -265,7 +281,6 @@ def PES_finder(X_new, Y_new, PES_copy, N_mesh):
         # we need to add 0.0000001 for data correction, sometimes the data will lost some very small number after storage and we need to correct it manually in order to fix the calculation
         #print(( Y_new % (param.primcell_b *  np.sqrt(3)/2)))
         #print(str(n) + ": " + str(dx) + ' ' + str(dy))
-        
         
         if ( dx  < 0.1 and dy  < 0.1 ):    
             # PES found 
@@ -336,6 +351,27 @@ def X_finder(y_coord,primcell,maxx): #this won't work for a supercell- have to p
     min_x = frac * primcell * (-0.5)
     max_x = min_x + maxx
     return min_x, max_x
+
+def newLocationFinder(x1, y1, type1, x2, y2, type2):
+    # using the Parametrization of line by t to help us figure out the proposed positions
+    t = type1 / (type1 + type2)
+    
+    proposedX = x2 + t * (x1 - x2)
+    proposedY = y2 + t * (y1 - y2)
+    
+    shortestDistance =  distance (allPossibleLocation[0][0], allPossibleLocation[0][1], proposedX, proposedY)
+    
+    new_X = 0
+    new_Y = 0
+    
+    # finding the nearest grid point that is close to the proposed position
+    for location in allPossibleLocation:
+        if (distance (location[0], location[1], proposedX, proposedY) < shortestDistance):
+            shortestDistance = distance (location[0],location[1], proposedX, proposedY)
+            new_X = location[0]
+            new_Y = location[1]
+            
+    return new_X, new_Y
 
 
 
@@ -509,6 +545,18 @@ LCG = 0
 for cluster in OUTPUT_data:
     if LCG <= cluster[1]:
         LCG =  cluster[1]
+        
+
+allPossibleLocation = []
+
+# generating all the grid point and store in allPossibleLocation
+for k in range(0, len(PES_copy)): 
+    for i in range(0, param.num_primcellInOneDirection):
+        for j in range(0, param.num_primcellInOneDirection):
+            yIncreaseFactor =  param.primcell_b *j
+            y = PES[k][2] + yIncreaseFactor * np.sqrt(3)/2
+            x = PES[k][1] + param.primcell_a * i -  yIncreaseFactor* 1 /2
+            allPossibleLocation.append([x, y])                                     
         
 with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):

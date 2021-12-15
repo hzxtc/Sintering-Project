@@ -27,7 +27,7 @@ numprimecellFactor = 5.0
 
 # x and y boundaries of simulation
 fixFactorForY = np.sqrt(3)/2 
-num_primcellInOneDirection = 27.0
+num_primcellInOneDirection = 27 # this have to be an integer
 maxx   = num_primcellInOneDirection * primcell_a
 minx   =  0.0 #this needs to be defined differently - I think if i define the vector rel to (0,0) then scale the vector appropriately- probably just define it in the cdes
 maxy   =  primcell_b * fixFactorForY  * num_primcellInOneDirection
