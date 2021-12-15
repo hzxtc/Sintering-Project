@@ -24,29 +24,159 @@ def distance(x1, y1, x2, y2):
     r = ((x1 - x2)**2.0 + (y1 - y2)**2.0)**(0.5)
     return r
 
-def overlap_check(Clusters, OUTPUT_data):
+# for sintering version
+# current_LCG is current largest cluster radius
+def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_LCG ):
+    overlap = False
+    targetPosition = -1
+
+    # check whether is the beginning
+    if current_LCG <= 0:
+        return overlap, targetPosition, current_LCG
+
+    # check whether this LCG is smaller than current radius
+    if current_LCG <= current_radius :
+        current_LCG = current_radius
+    
+    isRight = False
+    isLeft = False
+    isUp = False
+    isDown = False
+
+    # determine which kinds overlap is happening here
+    overlapPotentialType = []
+
+    # right most case, left most, up case, down case
+    if current_x + current_radius + current_LCG >=  param.maxx - current_y/np.sqrt(3): # shifting in x boundary
+        isRight = True
+        overlapPotentialType.append( "right")
+    if current_x - current_radius - current_LCG<= param.minx - current_y/np.sqrt(3): # shifting in x boundary
+        isLeft = True
+        overlapPotentialType.append("left" )
+    if current_y + current_radius + current_LCG>= param.maxy:
+        isUp = True
+        overlapPotentialType.append("up")
+    if current_y - current_radius - current_LCG<= param.miny:
+        isDown = True
+        overlapPotentialType.append("down")
+        
+    # no boundary overlap case
+    if overlapPotentialType == [] :
+        return overlap, targetPosition, current_LCG
+    
+    #print(overlapPotentialType)
+    
+    # newClusterList[][0] = x
+    # newClusterList[][1] = y
+    # newClusterList[][2] = radius
+    # newClusterList[][3] = types
+    # newClusterList[][4] = position
+    newClusterList = []
+    
+    for types in overlapPotentialType:
+        if types == "right" :
+            # delta is the longest length that other potential overlap cluster can exist
+            delta = current_x + current_radius - param.maxx/2 + 2 * current_LCG
+            #counting position
+            n = 0
+            # for coords [0] = type, [1] = R, [2] = x, [3] = y, [4] = e
+            for cluster in coords:
+                if cluster[2] <=  param.minx - cluster[1]/np.sqrt(3) + delta:
+                    newClusterList.append([cluster[2] + param.maxx, cluster[3], cluster[1], cluster[0],n])  
+                n += 1
+        if types == "left" :
+            # this delt should be a negative number
+            delta = current_x - current_radius + param.minx - 2 * current_LCG
+            n = 0
+            for cluster in coords:
+                if cluster[2] >= param.maxx - cluster[1]/np.sqrt(3) + delta:
+                    newClusterList.append([cluster[2] - param.maxx, cluster[3], cluster[1], cluster[0],n])
+                n += 1
+        if types == "up" :
+            delta = current_y + current_radius - param.maxy + 2 * current_LCG
+            n = 0
+            for cluster in coords:
+                if cluster[3] <= param.miny + delta:
+                    newClusterList.append([cluster[2] - param.maxy/np.sqrt(3), cluster[3] + param.maxy, cluster[1], cluster[0],n])
+                n += 1
+        if types == "down" :
+            delta = current_y - current_radius + param.miny - 2 * current_LCG
+            n = 0
+            for cluster in coords:
+                if cluster[3] >= param.maxy +delta:
+                    newClusterList.append([cluster[2] + param.maxy/np.sqrt(3), cluster[3] - param.maxy, cluster[1],cluster[0],n])
+                n += 1
+    
+    # check for corner cases
+    if isRight and isUp :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] <= current_LCG) and (cluster[3] <= current_LCG):
+                    newClusterList.append([cluster[2] + param.maxx - param.maxy/np.sqrt(3), cluster[3] + param.maxy, cluster[1], cluster[0],n])
+                n += 1
+    if isRight and isDown :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] <= current_LCG) and (cluster[3] >= param.maxy - current_LCG):
+                    newClusterList.append([cluster[2] + param.maxx + param.maxy/np.sqrt(3), cluster[3] - param.maxy, cluster[1], cluster[0],n])
+                n += 1
+    if isLeft and isUp :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] >= param.maxx - current_LCG) and (cluster[3] <= current_LCG):
+                    newClusterList.append([cluster[2] - param.maxx - param.maxy/np.sqrt(3), cluster[3] + param.maxy, cluster[1], cluster[0],n])
+                n += 1
+    if isLeft and isDown :
+        n = 0
+        for cluster in coords:
+                if (cluster[2] >= param.maxx - param.maxy/np.sqrt(3) - current_LCG) and (cluster[3] >= param.maxy - current_LCG):
+                    newClusterList.append([cluster[0] - param.maxx + param.maxy/np.sqrt(3), cluster[1] - param.maxy, cluster[2], cluster[3],n])
+                n += 1
+    
+    # checking overlap
+    for testCluster in newClusterList:
+        if distance(current_x,current_y, testCluster[0],testCluster[1]) <= current_radius + testCluster[2]:
+            #print("labla: " + str(distance(current_x,current_y, testCluster[0],testCluster[1])))
+            #print("current radius: " + str(current_radius))
+            #print(testCluster[2])
+            targetPosition = testCluster[4]
+            overlap = True
+            break
+                
+    return overlap, targetPosition, current_LCG
+
+def overlap_check(Clusters, OUTPUT_data, LCG):
     ovlp = False
     idx = []
     idx_pair = []
     for i in range(len(OUTPUT_data) - 1):
         if (ovlp == True):
             break
-        else:    
+        else:
             for j in range(i+1, len(OUTPUT_data)):
+                
                 R1 = OUTPUT_data[i][1] 
                 R2 = OUTPUT_data[j][1] 
                 d  = distance(OUTPUT_data[i][2],OUTPUT_data[i][3],OUTPUT_data[j][2],OUTPUT_data[j][3])
                 if (d < R1 + R2):
+                   # print("normal overlap")
                     ovlp = True
                     idx.append(i)
                     idx.append(j)
                     idx_pair.append([i,j])
                     #merge
                     numnew = OUTPUT_data[i][0] + OUTPUT_data[j][0]
-                    for k in range(len(Clusters)):
-                        if (Clusters[k][0] == numnew):
-                            Rnew = Clusters[k][1]
-                            Enew = Clusters[k][4]
+                    if numnew > 8 :
+                        for k in range(len(Clusters)):
+                            if (Clusters[k][0] == numnew):
+                                Rnew = Clusters[k][1]
+                                Enew = Clusters[k][4]
+                                if LCG < Rnew:
+                                    LCG = Rnew
+                    if numnew <= 8 :
+                        Rnew, Enew = boltzmannPopulationForNewCluster(numnew)
+                        if LCG < Rnew:
+                            LCG = Rnew
                     if (OUTPUT_data[i][0] > OUTPUT_data[j][0]):
                         xnew = OUTPUT_data[i][2]
                         ynew = OUTPUT_data[i][3]
@@ -55,14 +185,67 @@ def overlap_check(Clusters, OUTPUT_data):
                         ynew = OUTPUT_data[j][3]
                     OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
                     break
-    #removing duplicates from the list
-    idx = list(dict.fromkeys(idx))
-    idx = list(dict.fromkeys(idx))
-    
-    for i in sorted(idx, reverse=True):
-        del (OUTPUT_data[i])
+            # overlap boundary check
+            ovlp1 = False
+            ovlp1, overlapPosition, current_LCG = boundaryOverlapCheck(OUTPUT_data, OUTPUT_data[i][2],  OUTPUT_data[i][3], OUTPUT_data[i][1], LCG)
+            
+            #print(str(ovlp1) + " " + str(overlapPosition) + " " + str(current_LCG))
+            
+            if ovlp1 == True:
+                ovlp = True
+                LCG = current_LCG
+                j1 = overlapPosition
+                
+                # eliminate the possiblity that overlap itself
+                if (i == j1):
+                    ovlp = False
+                    break
 
-    return OUTPUT_data, ovlp, idx_pair
+                idx.append(i)
+                idx.append(j1)
+                idx_pair.append([i,j1])
+                #print("boundary overlap")
+                #print("LCG: " + str(LCG))
+                #print("x1: " + str(OUTPUT_data[i][2]) + " y1: " + str(OUTPUT_data[i][3])+ " r1: " + str(OUTPUT_data[i][1]) + " x2: " + str(OUTPUT_data[j1][2]) + " y2: " + str(OUTPUT_data[j1][3])+ " r2: " + str(OUTPUT_data[j1][1]))
+                #merge
+                numnew = OUTPUT_data[i][0] + OUTPUT_data[j1][0]
+                if numnew > 8 :
+                    for k in range(len(Clusters)):    
+                        if (Clusters[k][0] == numnew):
+                            Rnew = Clusters[k][1]
+                            Enew = Clusters[k][4]
+                            if LCG < Rnew:
+                                LCG = Rnew
+                if numnew <= 8 :
+                    Rnew, Enew = boltzmannPopulationForNewCluster(numnew)
+                    if LCG < Rnew:
+                        LCG = Rnew
+                if (OUTPUT_data[i][0] > OUTPUT_data[j1][0]):
+                    xnew = OUTPUT_data[i][2]
+                    ynew = OUTPUT_data[i][3]
+                else:
+                    xnew = OUTPUT_data[j1][2]
+                    ynew = OUTPUT_data[j1][3]
+                OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
+                break
+            
+    #removing duplicates from the list
+   # idx = list(dict.fromkeys(idx))
+    #idx = list(dict.fromkeys(idx))
+    
+   # for i in sorted(idx, reverse=True):
+       # del (OUTPUT_data[i])
+
+    # new remove methond
+    if (ovlp == True):
+        if (idx[0]<idx[1]):
+            OUTPUT_data.pop(idx[0]) # remove i 
+            OUTPUT_data.pop(idx[1]-1) # remove j -1
+        if (idx[0]>idx[1]):
+            OUTPUT_data.pop(idx[0]) # remove i 
+            OUTPUT_data.pop(idx[1]) # remove j  
+    return OUTPUT_data, ovlp, idx_pair, LCG
+
 
 def PES_finder(X_new, Y_new, PES_copy, N_mesh):
     finder = False
@@ -320,30 +503,53 @@ PES_copy     = copy.deepcopy(PES)
 with open('LOG', 'w') as f5:
     f5.write('%s\n' % ('**********LOG info**********'))
 
+    
+    
+LCG = 0
+for cluster in OUTPUT_data:
+    if LCG <= cluster[1]:
+        LCG =  cluster[1]
+        
 with open('metropolis','w') as f4:
     for step in range(Metro_Max+1):
         #check overlap
-        numberOfOverlap = 0
-        overlap = True
         
-        while numberOfOverlap < param.LimitForOverlap and overlap: # while not reach LimitForOverlap and still overlap
-            OUTPUT_data, ovlp, index_list = overlap_check(Clusters, OUTPUT_data)
+        overlapNumberCount = 0
+        overlap = False
+        indexListAll = []
+        overlapCheck = True # overlapCheck is to check whether not there is more overlap. It is true as long as ovlp is true. It is false once ovlp is false.
+        while (overlapCheck and (overlapNumberCount < param. LimitForOverlap)):
+            
+            OUTPUT_data, ovlp, index_list, LCG = overlap_check(Clusters, OUTPUT_data, LCG)
+            totalAtoms1 = 0
+            for tar in OUTPUT_data:
+                totalAtoms1 = totalAtoms1 + tar[0]
+           # print(str(overlapNumberCount)+ ": " + str(totalAtoms1))
+            if (ovlp == True):
+                overlap = True
+            overlapCheck = ovlp            
             Ncluster = len(OUTPUT_data)
-            overlap = ovlp
-            numberOfOverlap = numberOfOverlap + 1
             if (ovlp == True and step == 0):
-                print(index_list)
                 raise ValueError('Overlapping clusters found in the initial setup!')
             elif (ovlp == False and step == 0):
                 print('No overlapping clusters found in the initial setp!')
-            elif (ovlp == True and step > 0):
-                with open('LOG', 'a') as f5:
-                    f5.write('%5s  %12i\n' % ('step =',step))
-                    f5.write('%27s \n' %  ('**********OVERLAP**********'))
-                    f5.write('%27s \n' %  ('Overlapping clusters found!'))
-                    for lst in index_list:
-                        f5.write('%s' % (lst))
-                    f5.write('\n')
+                break
+                
+            for index in index_list:
+                indexListAll.append(index)
+
+            overlapNumberCount += 1
+
+        if (overlap == True and step > 0):
+            with open('LOG', 'a') as f5:
+                f5.write('%5s  %12i\n' % ('step =',step))
+                f5.write('%27s \n' %  ('**********OVERLAP**********'))
+                f5.write('%27s \n' %  ('Overlapping clusters found!'))
+                for lst in indexListAll:
+                    f5.write('%s' % (lst))
+                f5.write('\n')
+
+
 
         # writing output  
         if ( (step % write_step) == 0 ): 

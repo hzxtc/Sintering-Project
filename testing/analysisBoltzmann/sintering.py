@@ -196,6 +196,9 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
             # overlap boundary check
             ovlp1 = False
             ovlp1, overlapPosition, current_LCG = boundaryOverlapCheck(OUTPUT_data, OUTPUT_data[i][2],  OUTPUT_data[i][3], OUTPUT_data[i][1], LCG)
+            
+            print(str(ovlp1) + " " + str(overlapPosition) + " " + str(current_LCG))
+            
             if ovlp1 == True:
                 ovlp = True
                 LCG = current_LCG
