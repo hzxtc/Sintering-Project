@@ -166,7 +166,7 @@ while (count < param.num_clust):
     elif (param.largest_cluster == 8):
         temp = np.random.randint(0, 63)
     elif (param.largest_cluster > 8):
-        temp = np.random.randint(0, param.largest_cluste + 55)
+        temp = np.random.randint(0, param.largest_cluster + 55)
       
     # old method, not as accurate as using the PES data directly
     #x_normal = param.xstep_max * np.random.randint(0, (N_meshx - 1) * (xdups + 1)) 

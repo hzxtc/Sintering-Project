@@ -232,16 +232,16 @@ def overlap_check(Clusters, OUTPUT_data, LCG):
                         LCG = Rnew
                 # determine the new location
                 # this is the old method, the new location would be the one who has the larger number of atoms        
-                #if (OUTPUT_data[i][0] > OUTPUT_data[j1][0]):
-                    #xnew = OUTPUT_data[i][2]
-                    #ynew = OUTPUT_data[i][3]
-                #else:
-                    #xnew = OUTPUT_data[j1][2]
-                    #ynew = OUTPUT_data[j1][3]
+                if (OUTPUT_data[i][0] > OUTPUT_data[j1][0]):
+                    xnew = OUTPUT_data[i][2]
+                    ynew = OUTPUT_data[i][3]
+                else:
+                    xnew = OUTPUT_data[j1][2]
+                    ynew = OUTPUT_data[j1][3]
                     
                     
-                # here is the new method:
-                xnew, ynew = newLocationFinder(OUTPUT_data[i][2], OUTPUT_data[i][3], OUTPUT_data[i][0], OUTPUT_data[j1][2], OUTPUT_data[j1][3],  OUTPUT_data[j1][0])
+                # here is the new method: which is not correct for boundary overlap
+                #xnew, ynew = newLocationFinder(OUTPUT_data[i][2], OUTPUT_data[i][3], OUTPUT_data[i][0], OUTPUT_data[j1][2], OUTPUT_data[j1][3],  OUTPUT_data[j1][0])
                 OUTPUT_data.append([numnew,Rnew,xnew,ynew,Enew])
                 break
             
