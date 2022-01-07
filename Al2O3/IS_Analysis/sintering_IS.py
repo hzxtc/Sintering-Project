@@ -444,31 +444,46 @@ Q8=sum(Pt8_boltz_weight)
 Pt8_prob=[Pt8_boltz_weight[i]/Q8 for i in range(0,len(Pt8_boltz_weight))]
 Pt8_data=[[5.23684571,0.00000000],[4.61251355,0.01055526], [4.62601100,0.01332663]]
 
-# for the case of pt2 to pt8, this is not boltzmann but is isomer case, the name is hard to change
+# for the case of pt2 to pt8
 def boltzmannPopulationForNewCluster(numberOfAtoms) :
     assignedRadius = 0
     assignedEnergy = 0
+    if numberOfAtoms==2:
+        index = np.random.choice(Pt2_index,p=Pt2_prob)
+        assignedRadius = Pt2_data[index][0]
+        assignedEnergy = Pt2_data[index][1]
+        return assignedRadius, assignedEnergy
+    if numberOfAtoms==3:
+        index = np.random.choice(Pt3_index,p=Pt3_prob)
+        assignedRadius = Pt3_data[index][0]
+        assignedEnergy = Pt3_data[index][1]
+        return assignedRadius, assignedEnergy
+    if numberOfAtoms==4:
+        index = np.random.choice(Pt4_index,p=Pt4_prob)
+        assignedRadius = Pt4_data[index][0]
+        assignedEnergy = Pt4_data[index][1]
+        return assignedRadius, assignedEnergy
+    if numberOfAtoms==5:
+        index = np.random.choice(Pt5_index,p=Pt5_prob)
+        assignedRadius = Pt5_data[index][0]
+        assignedEnergy = Pt5_data[index][1]
+        return assignedRadius, assignedEnergy
+    if numberOfAtoms==6:
+        index = np.random.choice(Pt6_index,p=Pt6_prob)
+        assignedRadius = Pt6_data[index][0]
+        assignedEnergy = Pt6_data[index][1]
+        return assignedRadius, assignedEnergy
+    if numberOfAtoms==7:
+        index = np.random.choice(Pt7_index,p=Pt7_prob)
+        assignedRadius = Pt7_data[index][0]
+        assignedEnergy = Pt7_data[index][1]
+        return assignedRadius, assignedEnergy
+    if numberOfAtoms==8:
+        index = np.random.choice(Pt8_index,p=Pt8_prob)
+        assignedRadius = Pt8_data[index][0]
+        assignedEnergy = Pt8_data[index][1]
+        return assignedRadius, assignedEnergy
 
-    if (numberOfAtoms == 2):
-        temp = np.random.randint(0, 8)
-    elif (numberOfAtoms == 3):
-        temp = np.random.randint(8, 20)
-    elif (numberOfAtoms == 4):
-        temp = np.random.randint(20, 26)
-    elif (numberOfAtoms == 5):
-        temp = np.random.randint(26, 45)
-    elif (numberOfAtoms == 6):
-        temp = np.random.randint(45, 49)
-    elif (numberOfAtoms == 7):
-        temp = np.random.randint(49, 60)
-    elif (numberOfAtoms == 8):
-        temp = np.random.randint(60, 63)
-    elif (numberOfAtoms > 8):
-        temp = np.random.randint(0, param.largest_cluster + 55)
-    
-    assignedRadius = Clusters[temp][1]
-    assignedEnergy = Clusters[temp][4]
-    
     return assignedRadius, assignedEnergy
 
 # READ INPUT   
