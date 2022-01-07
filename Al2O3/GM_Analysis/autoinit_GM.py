@@ -105,7 +105,7 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
     
     # checking overlap
     for testCluster in newClusterList:
-        if distance(current_x,current_y, testCluster[0],testCluster[1]) <= current_radius + testCluster[2]:
+        if distance(current_x,current_y, testCluster[0],testCluster[1]) <= 2*4.98654557 :# change the condition for more generation type
             overlap = True
             break
                 
@@ -114,7 +114,7 @@ def boundaryOverlapCheck(coords, current_x, current_y, current_radius, current_L
 
 
 
-numprimcell   = param.numprimecellFactor*param.num_clust + param.num_single_atom
+numprimcell   =2 * param.numprimecellFactor*param.num_clust  + param.num_single_atom
 xdups = ydups = (int(numprimcell**0.5) + 2)
 PES           = [] # potential energy surface element, x, y, z, E
 Clusters      = [] # all possible cluster R and E
@@ -185,7 +185,7 @@ while (count < param.num_clust):
     overlap = False
     
     for i in range(len(coords)):
-        if (distance(x, y, coords[i][0], coords[i][1]) <= coords[i][2] + Clusters[temp][1] ):
+        if (distance(x, y, coords[i][0], coords[i][1]) <= 2* 4.98654557 ):
             overlap = True # overlaping atoms
 
     # boundary overlap case check
